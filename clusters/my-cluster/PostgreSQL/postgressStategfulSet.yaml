@@ -31,14 +31,14 @@ spec:
         volumeMounts:
         - name: postgresdata
           mountPath: /var/lib/postgresql/data/
-      nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: node.longhorn.io/default-node-tags
-                operator: In
-                values:
-                - db  # Значение вашего тега
+      # nodeAffinity:
+      #     requiredDuringSchedulingIgnoredDuringExecution:
+      #       nodeSelectorTerms:
+      #       - matchExpressions:
+      #         - key: node.longhorn.io/default-node-tags
+      #           operator: In
+      #           values:
+      #           - db  # Значение вашего тега
   volumeClaimTemplates:
   - metadata:
       name: postgresdata
