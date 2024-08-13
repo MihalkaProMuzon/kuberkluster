@@ -9,6 +9,6 @@ spec:
   prune: false
   sourceRef:
     kind: GitRepository
-    name: flux
+    name: flux-system
     namespace: flux-system  # Или другой неймспейс
   targetNamespace: longhorn  # Неймернсепс для деплоя
