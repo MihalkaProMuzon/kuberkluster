@@ -9,5 +9,5 @@ spec:
   prune: false
   targetNamespace: metallb-system
 resources:
-  - github.com/metallb/metallb/config/native?ref=v0.14.8
+  - https://raw.githubusercontent.com/metallb/metallb/v0.14.8/config/manifests/metallb-native.yaml
   - config.yaml
