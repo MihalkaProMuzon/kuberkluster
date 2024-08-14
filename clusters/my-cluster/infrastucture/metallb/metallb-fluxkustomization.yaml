@@ -7,6 +7,7 @@ spec:
   interval: 10m
   path: ./metallb
   prune: false
+  targetNamespace: metallb-system
 resources:
   - github.com/metallb/metallb/config/native?ref=v0.14.8
   - config.yaml
