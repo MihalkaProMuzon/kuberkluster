@@ -1,14 +1,15 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: nginxingress
+  name: ingress-nginx
   namespace: flux-system
 spec:
   interval: 10m
-  path: "./nginxingress"
+  path: "./ingress-nginx"
   prune: false
   sourceRef:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
-  targetNamespace: ingress-nginx
+  resources:
+    - https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.1/deploy/static/provider/cloud/deploy.yaml
