@@ -3,13 +3,5 @@ kind: Kustomization
 metadata:
   name: ingress-nginx
   namespace: flux-system
-spec:
-  interval: 10m
-  path: "./ingress-nginx"
-  prune: false
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-    namespace: flux-system
-  resources:
-    - https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.1/deploy/static/provider/cloud/deploy.yaml
+resources:
+  - https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.1/deploy/static/provider/cloud/deploy.yaml
