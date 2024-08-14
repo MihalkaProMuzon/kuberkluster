@@ -23,5 +23,5 @@ parameters:
   numberOfReplicas: "2"
   staleReplicaTimeout: "120"
   fromBackup: ""
-  nodeSelector: "data"
+  nodeSelector: "db"
   diskSelector: "dataDisk"
