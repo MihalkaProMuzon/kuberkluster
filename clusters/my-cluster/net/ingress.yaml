@@ -2,7 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingr
-  namespace: default
   # annotations:
   #   cert-manager.io/issuer: letsencrypt-prod
 spec:
@@ -15,7 +14,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: learn-app-svc
+                name: learn-app-svc-o1
                 port:
                   number: 80
           - path: /pg
@@ -29,6 +28,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: longhorn-frontend.longhorn-system.svc.cluster.local
+                name: longhorn-frontend-ex
                 port:
                   number: 80
