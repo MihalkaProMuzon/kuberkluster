@@ -17,13 +17,13 @@ spec:
                 name: learn-app-svc-o1
                 port:
                   number: 80
-          - path: /pg
-            pathType: Prefix
-            backend:
-              service:
-                name: pgadmin-svc.psql.svc.cluster.local
-                port:
-                  number: 80
+          # - path: /pg
+          #   pathType: Prefix
+          #   backend:
+          #     service:
+          #       name: pgadmin-svc.psql.svc.cluster.local
+          #       port:
+          #         number: 80
           - path: /lg
             pathType: Prefix
             backend:
