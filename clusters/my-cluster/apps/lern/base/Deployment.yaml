@@ -3,6 +3,7 @@ kind: Deployment
 
 metadata:
   name: learn-app-dep
+  namespace: default
 
   labels:
     app: learn-app
