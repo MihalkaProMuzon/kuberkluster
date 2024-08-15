@@ -29,6 +29,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: longhorn-frontend-ex
+                name: longhorn-frontend
                 port:
                   number: 80
