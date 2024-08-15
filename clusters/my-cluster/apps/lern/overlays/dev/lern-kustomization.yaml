@@ -1,0 +1,9 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: lernapp
+  namespace: lern
+spec:
+  interval: 1m
+  path: ./dev
+  targetNamespace: lern
