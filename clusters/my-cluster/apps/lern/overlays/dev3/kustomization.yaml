@@ -1,0 +1,10 @@
+resources:
+- ../../base
+nameSuffix: -o3
+
+images:
+  - name: mihalkapromzona/test
+    newTag: dep3
+
+commonLabels:
+  app: learn-app-dep3

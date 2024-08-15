@@ -1,0 +1,4 @@
+resources:
+- issuer.yaml
+- certificate.yaml
+- ingress.yaml

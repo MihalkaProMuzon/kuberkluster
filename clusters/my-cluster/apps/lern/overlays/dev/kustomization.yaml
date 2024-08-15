@@ -1,0 +1,10 @@
+resources:
+- ../../base
+nameSuffix: -o1
+
+images:
+  - name: mihalkapromzona/test
+    newTag: bodan
+
+commonLabels:
+  app: learn-app-dep1

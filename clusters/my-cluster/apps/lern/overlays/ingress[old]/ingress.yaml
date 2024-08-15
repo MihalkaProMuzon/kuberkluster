@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: example-com
+  namespace: lern
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
+    kubernetes.io/tls-acme: "true"
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - carloshost.ydns.eu
+    secretName: example-com-tls  # тот же секрет, что мы создали ранее
+  rules:
+  - host: carloshost.ydns.eu
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: learn-app-svc-o1  # название вашего сервиса
+            port:
+              number: 80

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: learn-app-dep
+  #namespace: lern
+
+  labels:
+    app: learn-app
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: learn-app
+
+  template:
+    metadata:
+      labels:
+        app: learn-app
+    spec:
+      containers:
+      - name: learn-app-container
+        image: mihalkapromzona/test:bodan
+        ports:
+        - containerPort: 80
