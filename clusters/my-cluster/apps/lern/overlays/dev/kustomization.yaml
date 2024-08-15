@@ -8,3 +8,5 @@ images:
 
 commonLabels:
   app: learn-app-dep1
+
+namespace: lern
