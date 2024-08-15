@@ -7,3 +7,7 @@ spec:
   interval: 10m
   path: ./ingress-nginx
   prune: false
+  sorceRef:
+    sourceRef:
+    kind: GitRepository
+    name: flux-system
