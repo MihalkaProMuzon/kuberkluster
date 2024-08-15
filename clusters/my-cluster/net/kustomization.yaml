@@ -1,5 +1,0 @@
-resources:
-- longhorn-externalsvc.yaml
-- pgadmin-externalsvc.yaml
-- lernapp-externalsvc.yaml
-- ingress.yaml
