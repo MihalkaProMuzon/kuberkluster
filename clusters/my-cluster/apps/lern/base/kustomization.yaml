@@ -1,4 +1,4 @@
 resources:
+  - Namespace.yaml
   - Deployment.yaml
-
-# namespace: lern
+  - Service.yaml
