@@ -3,6 +3,5 @@ kind: Kustomization
 resources:
 - pgadminDeploy.yaml
 - services.yaml
-- ingress.yaml
 
 namespace: psql
