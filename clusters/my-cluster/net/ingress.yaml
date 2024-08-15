@@ -15,20 +15,20 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: lernapp-externalsvc
+                name: learn-app-svc
                 port:
                   number: 80
           - path: /pg
             pathType: Prefix
             backend:
               service:
-                name: pgadmin-externalsvc
+                name: pgadmin-svc.psql.svc.cluster.local
                 port:
                   number: 80
           - path: /lg
             pathType: Prefix
             backend:
               service:
-                name: longhorn-externalsvc
+                name: longhorn-frontend.longhorn-system.svc.cluster.local
                 port:
                   number: 80
