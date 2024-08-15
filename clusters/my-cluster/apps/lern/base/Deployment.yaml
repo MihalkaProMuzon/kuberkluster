@@ -1,9 +1,9 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: lern
+# apiVersion: v1
+# kind: Namespace
+# metadata:
+#   name: lern
 
----
+# ---
 apiVersion: apps/v1
 kind: Deployment
 
