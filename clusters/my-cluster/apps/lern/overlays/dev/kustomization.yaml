@@ -1,6 +1,5 @@
 resources:
 - ../../base
-- ingress.yaml
 nameSuffix: -o1
 
 images:
