@@ -6,10 +6,10 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: longhorn.local
+    - host: *
       http:
         paths:
-          - path: /
+          - path: /lg
             pathType: Prefix
             backend:
               service: 

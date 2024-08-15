@@ -5,10 +5,10 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: phppgadmin.local
+    - host: *
       http:
         paths:
-          - path: /
+          - path: /pg
             pathType: Prefix
             backend:
               service: 
