@@ -2,4 +2,4 @@ resources:
   - Deployment.yaml
   - Service.yaml
 
-namespace: lern
+# namespace: lern
