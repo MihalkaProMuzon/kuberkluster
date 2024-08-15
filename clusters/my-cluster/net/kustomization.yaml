@@ -1,4 +1,0 @@
-resources:
-- longhorn-externalsvc.yaml
-- pgadmin-externalsvc.yaml
-- ingress.yaml
