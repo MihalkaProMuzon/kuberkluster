@@ -8,6 +8,5 @@ spec:
   path: ./ingress-nginx
   prune: false
   sorceRef:
-    sourceRef:
     kind: GitRepository
     name: flux-system
