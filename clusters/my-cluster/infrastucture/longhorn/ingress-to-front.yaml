@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: loghorn.local
+    - host: longhorn.local
       http:
         paths:
           - path: /
