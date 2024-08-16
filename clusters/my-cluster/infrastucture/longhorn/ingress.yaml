@@ -4,7 +4,7 @@ metadata:
   name: longhorn-to-front
   namespace: longhorn-system
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /#
+    nginx.ingress.kubernetes.io/rewrite-target: /
     # cert-manager.io/issuer: letsencrypt-prod
 spec:
   ingressClassName: nginx
