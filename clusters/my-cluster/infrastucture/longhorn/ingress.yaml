@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: kompik-lg.duckdns.org
+    - host: kompliker.longhorn.ydns.eu
       http:
         paths:
           - path: /
