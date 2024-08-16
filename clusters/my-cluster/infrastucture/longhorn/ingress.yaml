@@ -12,7 +12,7 @@ spec:
     - host: komplikter.servehttp.com
       http:
         paths:
-          - path: /
+          - path: /lg
             pathType: Prefix
             backend:
               service:

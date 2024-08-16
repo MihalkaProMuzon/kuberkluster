@@ -4,8 +4,8 @@ metadata:
   name: ingr
   namespace: default
   annotations:
-    # cert-manager.io/issuer: letsencrypt-prod
     nginx.org/mergeable-ingress-type: "master"
+    # cert-manager.io/issuer: letsencrypt-prod
 spec:
   ingressClassName: nginx
   rules:
