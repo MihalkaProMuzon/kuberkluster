@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: komplikter-lg.servehttp.com
+    - host: komplikter-sub1.servehttp.com
       http:
         paths:
           - path: /

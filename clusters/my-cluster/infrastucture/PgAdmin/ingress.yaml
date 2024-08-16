@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: komplikter.pgadmin.ydns.eu
+    - host: komplikter-sub2.servehttp.com
       http:
         paths:
           - path: /
