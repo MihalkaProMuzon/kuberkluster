@@ -4,4 +4,4 @@ resources:
 - https://raw.githubusercontent.com/longhorn/longhorn/v1.6.2/deploy/longhorn.yaml
 - nodes.yaml
 - storageClass.yaml
-- ingress.yaml
+# - ingress.yaml
