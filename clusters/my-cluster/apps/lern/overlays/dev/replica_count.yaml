@@ -1,7 +1,0 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: learn-app-dep
-  namespace: lern
-spec:
-  replicas: 1
