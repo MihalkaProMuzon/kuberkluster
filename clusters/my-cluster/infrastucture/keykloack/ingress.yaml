@@ -1,20 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: pgadmin-ingress
-  namespace: psql
-  # annotations:
-    # cert-manager.io/issuer: letsencrypt-prod
+  name: keykloack-ingress
+  namespace: keycloak
 spec:
   ingressClassName: nginx
   rules:
-    - host: komplikter-sub2.servehttp.com
+    - host: komplikter-sub1.servehttp.com
       http:
         paths:
-          - path: /
+          - path: /kk
             pathType: Prefix
             backend:
               service:
-                name: pgadmin-svc
+                name: keycloak
                 port:
                   number: 80
