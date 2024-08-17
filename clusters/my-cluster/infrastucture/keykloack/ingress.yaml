@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: keykloack-ingress
+  namespace: keycloak
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: komplikter-sub1.servehttp.com
+      http:
+        paths:
+          - path: /kk
+            pathType: Prefix
+            backend:
+              service:
+                name: keycloak
+                port:
+                  number: 80
