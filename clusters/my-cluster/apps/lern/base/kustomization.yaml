@@ -5,3 +5,5 @@ resources:
   - Deployment.yaml
   - Service.yaml
   - ingress.yaml
+
+namespace: lernapp
