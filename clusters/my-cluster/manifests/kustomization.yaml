@@ -1,8 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - metallb-flux.yaml
-  # - ingress-nginx.yanml
-  # - longhorn.yanml
-  # - PostgreSQL.yanml
-  # - PgAdmin.yanml
+  - metallb.yaml
+  - ingress-nginx.yanml
+  - longhorn.yanml
+  - postgreSQL.yanml
+  - pgAdmin.yanml
