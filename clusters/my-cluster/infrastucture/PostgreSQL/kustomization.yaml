@@ -5,6 +5,4 @@ resources:
 - postgressStategfulSet.yaml
 - services.yaml
 
-- fluxkustomization.yaml
-
 namespace: psql
