@@ -4,5 +4,5 @@ resources:
   - metallb.yaml
   - ingress-nginx.yaml
   - longhorn.yaml
-  - postgresql.yaml
+  - pgsql.yaml
   - pgadmin.yaml
