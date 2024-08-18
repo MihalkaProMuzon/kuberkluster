@@ -4,7 +4,7 @@ metadata:
   name: postgresql
   namespace: flux-system
 spec:
-  interval: 10m0s
+  interval: 1m0s
   path: ./clusters/my-cluster/infrastucture/psql
   prune: false
   sourceRef:
