@@ -5,4 +5,4 @@ resources:
   - ingress-nginx.yaml
   - longhorn.yaml
   - pgsql.yaml
-  - pgadmin.yaml
+  - pgadm.yaml
