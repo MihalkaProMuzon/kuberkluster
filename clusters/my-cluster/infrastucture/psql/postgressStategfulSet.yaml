@@ -31,6 +31,14 @@ spec:
         volumeMounts:
         - name: postgresdata
           mountPath: /var/lib/postgresql/data/
+        - name: init-scripts
+          mountPath: /docker-entrypoint-initdb.d
+      volumes:
+        - name: init-scripts
+          configMap:
+            name: postgres-init-scripts
+
+
       # nodeAffinity:
       #     requiredDuringSchedulingIgnoredDuringExecution:
       #       nodeSelectorTerms:
@@ -38,7 +46,9 @@ spec:
       #         - key: node.longhorn.io/default-node-tags
       #           operator: In
       #           values:
-      #           - db  # Значение вашего тега
+      #           - db
+
+
   volumeClaimTemplates:
   - metadata:
       name: postgresdata
