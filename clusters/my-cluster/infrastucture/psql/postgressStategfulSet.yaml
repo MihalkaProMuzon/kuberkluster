@@ -21,6 +21,8 @@ spec:
             value: "mpm"
           - name: POSTGRES_PASSWORD
             value: "mpm123"
+          - name: POSTGRES_DB
+            value: ""  # Оставьте пустым, чтобы избежать создания БД с именем пользовател
           - name: PGDATA
             value: /var/lib/postgresql/data/data/
         ports:
