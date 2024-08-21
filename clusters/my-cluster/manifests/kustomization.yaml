@@ -6,6 +6,6 @@ resources:
   - longhorn.yaml
   - pgsql.yaml
   - pgadm.yaml
-  # - keycloak.yaml
+  # - keycloak.yaml 
 
-  - lernapp.yaml
+  # - lernapp.yaml
