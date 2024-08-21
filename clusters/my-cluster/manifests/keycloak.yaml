@@ -4,9 +4,9 @@ metadata:
   name: keycloak
   namespace: flux-system
 spec:
-  interval: 0m20s
+  interval: 0m30s
   path: ./clusters/my-cluster/infrastucture/keycloak
-  prune: false
+  prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
