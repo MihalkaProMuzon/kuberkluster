@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: keycloak
+spec:
+  serviceName: keycloak
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keycloak
+  template:
+    metadata:
+      labels:
+        app: keycloak
+    spec:
+      containers:
+      - name: keycloak
+        image: jboss/keycloak:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: DB_VENDOR
+          value: "POSTGRES"
+        - name: DB_ADDR
+          value: "postgres-np"
+        - name: DB_DATABASE
+          value: "keycloak"
+        - name: DB_USER
+          value: "keycloak_user"
+        - name: DB_PASSWORD
+          value: "password"
+        - name: KEYCLOAK_USER
+          value: "admin"
+        - name: KEYCLOAK_PASSWORD
+          value: "admin"
