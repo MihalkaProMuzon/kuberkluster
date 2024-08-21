@@ -8,4 +8,4 @@ resources:
   - pgadm.yaml
   - keycloak.yaml 
 
-  # - lernapp.yaml
+  - lernapp.yaml
