@@ -8,10 +8,10 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: ddoskk.cam
+    - host: komplikter-sub1.servehttp.com
       http:
         paths:
-          - path: /kk
+          - path: /
             pathType: Prefix
             backend:
               service:
