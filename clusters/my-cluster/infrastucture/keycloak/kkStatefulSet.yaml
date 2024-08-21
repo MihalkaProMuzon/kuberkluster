@@ -15,22 +15,47 @@ spec:
     spec:
       containers:
       - name: keycloak
+        
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keycloak
+  namespace: keycloak
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keycloak
+  template:
+    metadata:
+      labels:
+        app: keycloak
+    spec:
+      containers:
+      - name: keycloak
         image: quay.io/keycloak/keycloak:25.0.4
         args: ["start-dev"]
         ports:
         - containerPort: 8080
         env:
         - name: DB_VENDOR
-          value: "POSTGRES"
+          value: POSTGRES
         - name: DB_ADDR
-          value: "postgres-np"
+          value: postgres-np
         - name: DB_DATABASE
-          value: "keycloak"
+          value: keycloak
         - name: DB_USER
-          value: "keycloak_user"
+          value: keycloak_user
         - name: DB_PASSWORD
-          value: "password"
+          value: password
         - name: KEYCLOAK_ADMIN
-          value: "admin"
+          value: admin
         - name: KEYCLOAK_ADMIN_PASSWORD
-          value: "admin"
+          value: admin
+        # readinessProbe:
+        #   httpGet:
+        #     path: /auth
+        #     port: 8080
+        #   initialDelaySeconds: 30
+        #   timeoutSeconds: 5
