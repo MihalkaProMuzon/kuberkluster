@@ -22,4 +22,4 @@ spec:
       - name: flaga-container
         image: mihalkapromzona/flaga:flaga
         ports:
-        - containerPort: 80
+        - containerPort: 5000

@@ -16,4 +16,4 @@ spec:
               service:
                 name: flaga-svc
                 port:
-                  number: 500
+                  number: 80
