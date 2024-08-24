@@ -9,4 +9,4 @@ resources:
   - keycloak.yaml 
 
   # - lernapp.yaml
-  - flaga.yaml
+  # - flaga.yaml
