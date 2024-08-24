@@ -14,6 +14,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: flaga-svc
+                name: flaga-service
                 port:
                   number: 80
