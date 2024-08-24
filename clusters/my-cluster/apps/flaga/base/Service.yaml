@@ -6,7 +6,8 @@ spec:
   selector:
     app: flaga
   ports:
-    - protocol: TCP
+    - name: flask-port
+      protocol: TCP
       port: 80
       targetPort: 5000
   # type: LoadBalancer
