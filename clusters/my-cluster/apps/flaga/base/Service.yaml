@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flaga-svc
+  name: flaga-service
 spec:
   selector:
     app: flaga
