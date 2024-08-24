@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: flaga-container
-        image: mihalkapromzona/flaga:flagaX2
+        image: mihalkapromzona/flaga:flagaX3
         ports:
         - containerPort: 5000
