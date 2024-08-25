@@ -9,3 +9,4 @@ spec:
       targetPort: 4466
   selector:
     k8s-app: headlamp
+  type: LoadBalancer
