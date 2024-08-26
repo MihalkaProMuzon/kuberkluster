@@ -7,5 +7,5 @@ resources:
 
   - helmrep.yaml
   - helmrel.yaml
-  - CRB.yaml
+  # - CRB.yaml
   # - svc.yaml
