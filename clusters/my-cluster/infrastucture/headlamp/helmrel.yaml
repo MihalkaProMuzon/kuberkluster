@@ -4,13 +4,13 @@ metadata:
   name: my-headlamp
   namespace: kube-system
 spec:
-  interval: 1m0s
+  interval: 1m
   chart:
     spec:
-      chart: headlamp-repo/headlamp
+      chart: headlamp/headlamp
       sourceRef:
         kind: HelmRepository
-        name: headlamp-repo
+        name: headlamp
         namespace: flux-system
   releaseName: my-headlamp
   values: 
