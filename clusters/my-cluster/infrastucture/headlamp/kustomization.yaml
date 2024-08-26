@@ -4,7 +4,8 @@ resources:
   # - hl.yaml
   # - cfgmap.yaml
   # - https://raw.githubusercontent.com/kinvolk/headlamp/main/kubernetes-headlamp.yaml
-  
+
   - helmrep.yaml
   - helmrel.yaml
+  - CRB.yaml
   # - svc.yaml
