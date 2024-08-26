@@ -5,12 +5,10 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  chart:
-    spec:
-      chartRef:
-        kind: HelmChart
-        name: headlamp
-        namespace: flux-system
+  chartRef:
+    kind: HelmChart
+    name: headlamp
+    namespace: flux-system
   releaseName: my-headlamp
   values: 
     config:
