@@ -9,6 +9,8 @@ resources:
   - keycloak.yaml 
 
   - headlamp.yaml
+  - prometeus.yaml
+
 
   # - lernapp.yaml
   - flaga.yaml
