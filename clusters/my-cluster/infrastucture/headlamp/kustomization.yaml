@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - hl.yaml
   - svc.yaml
-  - cfgmap.yaml
+  # - cfgmap.yaml
