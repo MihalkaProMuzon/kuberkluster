@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - https://github.com/prometheus-operator/prometheus-operator/releases/download/v0.76.0/bundle.yaml
   - RBAC.yaml
+  - svc.yaml
   - monitor.yaml
 
 namespace: default
