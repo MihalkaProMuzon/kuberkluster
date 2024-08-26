@@ -1,15 +1,14 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: my-headlamp
-  namespace: kube-system
+  name: headlamp-helmrel
+  namespace: flux-system
 spec:
   interval: 1m
   chart:
     spec:
-      chart: headlamp/headlamp
-      sourceRef:
-        kind: HelmRepository
+      chartRef:
+        kind: HelmChart
         name: headlamp
         namespace: flux-system
   releaseName: my-headlamp
