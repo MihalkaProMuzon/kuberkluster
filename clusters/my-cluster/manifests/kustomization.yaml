@@ -11,6 +11,7 @@ resources:
   - headlamp.yaml
   - prometeus.yaml
 
+  - exapp.yaml
 
   # - lernapp.yaml
   - flaga.yaml
