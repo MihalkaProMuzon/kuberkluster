@@ -8,7 +8,7 @@ resources:
   - pgadm.yaml
   - keycloak.yaml 
 
-  # - headlamp.yaml
+  - headlamp.yaml
 
   # - lernapp.yaml
   # - flaga.yaml
