@@ -8,5 +8,5 @@ spec:
     - port: 80
       targetPort: 4466
   selector:
-    k8s-app: headlamp
+    app.kubernetes.io/name: headlamp
   type: LoadBalancer
