@@ -7,7 +7,7 @@ spec:
   interval: 1m
   chartRef:
     kind: HelmChart
-    name: headlamp
+    name: headlamp/headlamp
     namespace: flux-system
   values: 
     config:
