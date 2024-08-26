@@ -4,6 +4,7 @@ metadata:
   name: headlampa
   namespace: kube-system
 spec:
+  interval: 1m0s
   chart:
     spec:
       chart: headlamp/headlamp
