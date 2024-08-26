@@ -9,7 +9,6 @@ spec:
     kind: HelmChart
     name: headlamp
     namespace: flux-system
-  releaseName: my-headlamp
   values: 
     config:
       oidc:
