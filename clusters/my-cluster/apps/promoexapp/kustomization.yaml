@@ -4,3 +4,5 @@ resources:
  - deploy.yaml
  - svc.yaml
  - svcmon.yaml
+
+namespace: default
