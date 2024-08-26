@@ -7,7 +7,7 @@ spec:
   interval: 1m0s
   chart:
     spec:
-      chart: headlamp/headlamp
+      chart: headlamp-repo/headlamp
       sourceRef:
         kind: HelmRepository
         name: headlamp-repo
