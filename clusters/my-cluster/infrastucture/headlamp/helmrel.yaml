@@ -21,3 +21,5 @@ spec:
         clientSecret: "J6iH1wq3987TY6CX3H8g7KGGOX8FZIvM"
         issuerURL: "http://192.168.0.240/realms/hdlmp"
         scopes: "email,profile"
+    service:
+      type: LoadBalancer
