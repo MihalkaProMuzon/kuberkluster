@@ -1,0 +1,22 @@
+yaml
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: headlampa
+  namespace: kube-system
+spec:
+  chart:
+    spec:
+      chart: headlamp/headlamp
+      sourceRef:
+        kind: HelmRepository
+        name: headlamp-repo
+        namespace: flux-system
+  releaseName: my-headlamp
+  values: 
+    config:
+      oidc:
+        clientID: "hedlampa"
+        clientSecret: "J6iH1wq3987TY6CX3H8g7KGGOX8FZIvM"
+        issuerURL: "http://192.168.0.240/realms/hdlmp"
+        scopes: "email,profile"
