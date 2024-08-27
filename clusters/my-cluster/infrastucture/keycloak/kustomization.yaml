@@ -4,6 +4,6 @@ resources:
 # - namespace.yaml
 - kk.yaml
 - svc.yaml
-# - ingress.yaml
+- ingress.yaml
 
 namespace: psql
