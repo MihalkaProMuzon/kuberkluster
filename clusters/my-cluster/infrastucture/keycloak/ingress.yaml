@@ -8,8 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: komplikter.servehttp.com
-      http:
+    - http:
         paths:
           - path: /
             pathType: Prefix
