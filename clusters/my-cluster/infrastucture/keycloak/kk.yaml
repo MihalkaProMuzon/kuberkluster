@@ -23,22 +23,21 @@ spec:
         - containerPort: 8080
         env:
         - name: KC_HEALTH_ENABLED
-          value: true
+          value: "true"
         - name: KC_METRICS_ENABLED
-          value: true
-
+          value: "true"
         - name: KC_DB
-          value: postgres
+          value: "postgres"
         - name: KC_DB_URL
-          value: http://192.168.0.243
+          value: "http://192.168.0.243"
         - name: KC_DB_USERNAME
-          value: keycloak_user
+          value: "keycloak_user"
         - name: KC_DB_PASSWORD
-          value: password
+          value: "password"
         - name: KEYCLOAK_ADMIN
-          value: admin
+          value: "admin"
         - name: KEYCLOAK_ADMIN_PASSWORD
-          value: admin1
+          value: "admin1"
         # readinessProbe:
         #   httpGet:
         #     path: /auth
