@@ -18,24 +18,27 @@ spec:
       containers:
       - name: keycloak
         image: quay.io/keycloak/keycloak:25.0.4
-        args: ["start-dev"]
+        args: ["start-dev --"]
         ports:
         - containerPort: 8080
         env:
-        - name: DB_VENDOR
-          value: POSTGRES
-        - name: DB_ADDR
-          value: 192.168.0.243
-        - name: DB_DATABASE
-          value: keycloak
-        - name: DB_USER
+        - name: KC_HEALTH_ENABLED
+          value: true
+        - name: KC_METRICS_ENABLED
+          value: true
+
+        - name: KC_DB
+          value: postgres
+        - name: KC_DB_URL
+          value: http://192.168.0.243
+        - name: KC_DB_USERNAME
           value: keycloak_user
-        - name: DB_PASSWORD
+        - name: KC_DB_PASSWORD
           value: password
         - name: KEYCLOAK_ADMIN
           value: admin
         - name: KEYCLOAK_ADMIN_PASSWORD
-          value: admin
+          value: admin1
         # readinessProbe:
         #   httpGet:
         #     path: /auth
