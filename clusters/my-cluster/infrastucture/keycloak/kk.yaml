@@ -29,7 +29,7 @@ spec:
         - name: KC_DB
           value: "postgres"
         - name: KC_DB_URL
-          value: "http://192.168.0.243"
+          value: "postrges-np"
         - name: KC_DB_USERNAME
           value: "keycloak_user"
         - name: KC_DB_PASSWORD
