@@ -16,5 +16,5 @@ spec:
       interval: 1m
    valuesFrom:
     - kind: ConfigMap
-      name: helm-values.yaml
+      name: hvalues
     
