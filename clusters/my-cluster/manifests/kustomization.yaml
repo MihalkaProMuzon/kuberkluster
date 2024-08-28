@@ -9,7 +9,8 @@ resources:
   - keycloak.yaml 
 
   - headlamp.yaml
-  - prometeus.yaml
+  # - prometeus.yaml
+  - loki-stack.yaml
 
   - exapp.yaml
 
