@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - Namespace.yaml
   - helmrep.yaml
-  - helm-values.yaml
+  - hvalues.yaml
   - helmrel.yaml
 
 namespace: monitoring
