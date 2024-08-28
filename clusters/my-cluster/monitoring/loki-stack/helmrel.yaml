@@ -14,6 +14,8 @@ spec:
         namespace: flux-system
       interval: 1m
    values:
+
+
     prometheus:
       enabled: true
       isDefault: false
@@ -55,4 +57,3 @@ spec:
           labelValue: ""
           enabled: true
           maxLines: 1000
-    
