@@ -4,5 +4,3 @@ resources:
   - Namespace.yaml
   - helmrep.yaml
   - helmrel.yaml
-
-namespace: monitoring
