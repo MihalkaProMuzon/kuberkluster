@@ -5,3 +5,5 @@ resources:
   - helmrep.yaml
   - helmrel.yaml
   - svc-proxy.yaml
+
+namespace: monitoring
