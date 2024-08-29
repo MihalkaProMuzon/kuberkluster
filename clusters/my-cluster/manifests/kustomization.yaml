@@ -12,7 +12,6 @@ resources:
   # - prometeus.yaml
   - loki-stack.yaml
 
-  - exapp.yaml
-
+  # - exapp.yaml
   # - lernapp.yaml
   - flaga.yaml
