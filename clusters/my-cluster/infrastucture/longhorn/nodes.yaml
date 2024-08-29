@@ -14,6 +14,7 @@ metadata:
     node.longhorn.io/default-disks-config: '[{"name":"data","path":"/var/lib/longhorn/","allowScheduling":true,"tags":["dataDisk"]}]'
   labels:
     node.longhorn.io/create-default-disk: 'config'
+    storage: 'yes'
 
 ---
 apiVersion: v1
@@ -25,3 +26,4 @@ metadata:
     node.longhorn.io/default-disks-config: '[{"name":"data","path":"/var/lib/longhorn/","allowScheduling":true,"tags":["dataDisk"]}]'
   labels:
     node.longhorn.io/create-default-disk: 'config'
+    storage: 'yes'

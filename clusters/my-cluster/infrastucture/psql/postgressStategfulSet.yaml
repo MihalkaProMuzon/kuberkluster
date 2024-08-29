@@ -38,16 +38,8 @@ spec:
           configMap:
             name: postgres-init-scripts
 
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-          - weight: 100
-            preference:
-              matchExpressions:
-              - key: storage
-                operator: NotIn
-                values:
-                - no
+      nodeSelector:
+        storage: "yes"
 
 
   volumeClaimTemplates:
