@@ -25,6 +25,6 @@ spec:
   - port: 5432
     name: postgres-port
     targetPort: postgres-port
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: postgres
