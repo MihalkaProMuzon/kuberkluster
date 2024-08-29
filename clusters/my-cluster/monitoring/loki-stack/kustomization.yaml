@@ -4,3 +4,4 @@ resources:
   - Namespace.yaml
   - helmrep.yaml
   - helmrel.yaml
+  - svc-proxy.yaml
