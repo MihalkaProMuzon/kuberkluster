@@ -55,3 +55,14 @@ spec:
         - name: state
           persistentVolumeClaim:
             claimName: pgadmin-pvc
+            
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            preference:
+              matchExpressions:
+              - key: storage
+                operator: NotIn
+                values:
+                - no

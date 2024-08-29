@@ -38,15 +38,16 @@ spec:
           configMap:
             name: postgres-init-scripts
 
-
-      # nodeAffinity:
-      #     requiredDuringSchedulingIgnoredDuringExecution:
-      #       nodeSelectorTerms:
-      #       - matchExpressions:
-      #         - key: node.longhorn.io/default-node-tags
-      #           operator: In
-      #           values:
-      #           - db
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            preference:
+              matchExpressions:
+              - key: storage
+                operator: NotIn
+                values:
+                - no
 
 
   volumeClaimTemplates:
