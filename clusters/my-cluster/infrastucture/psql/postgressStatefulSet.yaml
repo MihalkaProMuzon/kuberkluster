@@ -39,12 +39,12 @@ spec:
         volumeMounts:
         - name: postgresdata
           mountPath: /var/lib/postgresql/data/
-        - name: init-scripts
-          mountPath: /docker-entrypoint-initdb.d
-      volumes:
-        - name: init-scripts
-          configMap:
-            name: postgres-init-scripts
+      #   - name: init-scripts
+      #     mountPath: /docker-entrypoint-initdb.d
+      # volumes:
+      #   - name: init-scripts
+      #     configMap:
+      #       name: postgres-init-scripts
 
       nodeSelector:
         storage: "yes"
