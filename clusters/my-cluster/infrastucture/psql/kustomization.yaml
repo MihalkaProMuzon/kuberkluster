@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - namespace.yaml
 - configmap.yaml
-- psql.secret.enc.yaml
+# - psql.secret.enc.yaml
 - postgressStatefulSet.yaml
 - services.yaml
 # - ingress.yaml

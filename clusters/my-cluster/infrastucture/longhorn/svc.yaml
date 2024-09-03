@@ -5,6 +5,7 @@ metadata:
 spec:
   ports:
     - port: 80
+      targetPort: http
   selector:
     app: longhorn-ui
   type: LoadBalancer
