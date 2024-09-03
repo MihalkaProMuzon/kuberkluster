@@ -5,7 +5,7 @@ resources:
   - ingress-nginx.yaml
   - longhorn.yaml
   - pgsql.yaml
-  - pgadm.yaml
+  # - pgadm.yaml
   - keycloak.yaml 
 
   - headlamp.yaml
