@@ -41,14 +41,14 @@ spec:
           - name: PGDATA
             value: /var/lib/postgresql/data/data/
 
-        command: ["sh", "-c"]
-        args:
-          - |
-            psql -U postgres <<-EOSQL
-              CREATE DATABASE keycloak;
-              CREATE USER keycloak_user WITH PASSWORD '\$KK_PASSWORD';
-              GRANT ALL PRIVILEGES ON DATABASE keycloak TO keycloak_user;
-            EOSQL
+        # command: ["sh", "-c"]
+        # args:
+        #   - |
+        #     psql -U postgres <<-EOSQL
+        #       CREATE DATABASE keycloak;
+        #       CREATE USER keycloak_user WITH PASSWORD '\$KK_PASSWORD';
+        #       GRANT ALL PRIVILEGES ON DATABASE keycloak TO keycloak_user;
+        #     EOSQL
 
 
         ports:
