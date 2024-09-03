@@ -4,7 +4,7 @@ resources:
 - namespace.yaml
 - configmap.yaml
 - psql.secret.enc.yaml
-- postgressStategfulSet.yaml
+- postgressStatefulSet.yaml
 - services.yaml
 # - ingress.yaml
 
