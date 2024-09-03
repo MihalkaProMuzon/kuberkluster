@@ -4,6 +4,7 @@ resources:
 - namespace.yaml
 - postgressStatefulSet.yaml
 - services.yaml
+- secret.yaml
 
 # - configmap.yaml
 # - ingress.yaml
