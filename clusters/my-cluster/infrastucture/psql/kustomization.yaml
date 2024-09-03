@@ -11,7 +11,7 @@ resources:
 
 namespace: psql
 
-secretGenerator:
-  - name: postgres-secret
-    files:
-      - psql.secret.enc.yaml
+# secretGenerator:
+#   - name: postgres-secret
+#     files:
+#       - psql.secret.enc.yaml
