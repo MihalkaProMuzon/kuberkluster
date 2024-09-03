@@ -67,7 +67,7 @@ spec:
       name: postgresdata
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "db"
+      storageClassName: "data"
       resources:
         requests:
           storage: 1Gi
