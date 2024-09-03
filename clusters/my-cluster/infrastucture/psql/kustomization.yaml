@@ -9,9 +9,9 @@ resources:
 # - configmap.yaml
 # - ingress.yaml
 
-namespace: psql
-
 secretGenerator:
-  - name: postgres-secret
+  - name: postgres-secret-decoded
     files:
       - psql.secret.enc.yaml
+
+namespace: psql
