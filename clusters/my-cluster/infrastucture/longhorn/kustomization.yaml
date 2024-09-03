@@ -6,3 +6,5 @@ resources:
 - storageClass.yaml
 - svc.yaml
 # - ingress.yaml
+
+namespace: longhorn-system
