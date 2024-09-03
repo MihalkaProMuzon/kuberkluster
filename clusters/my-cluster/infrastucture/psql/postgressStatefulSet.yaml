@@ -20,19 +20,19 @@ spec:
           - name: POSTGRES_USER
             valueFrom:
             secretKeyRef:
-              name: postgres-secret-decoded
+              name: postgres-secret
               key: postgres-user
           
           - name: POSTGRES_PASSWORD
             valueFrom:
             secretKeyRef:
-              name: postgres-secret-decoded
+              name: postgres-secret
               key: postgres-password
 
           - name: KK_PASSWORD
             valueFrom:
             secretKeyRef:
-              name: postgres-secret-decoded
+              name: postgres-secret
               key: kk-user
 
           - name: POSTGRES_DB
