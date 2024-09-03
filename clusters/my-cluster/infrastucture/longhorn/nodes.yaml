@@ -11,7 +11,7 @@ metadata:
   name: workerlocal
   annotations:
     node.longhorn.io/default-node-tags: '["db", "data"]'
-    node.longhorn.io/default-disks-config: '[{"name":"data","path":"/var/lib/longhorn/","allowScheduling":true,"tags":["dataDisk"]}]'
+    node.longhorn.io/default-disks-config: '[{"name":"data","path":"/mnt/disker","allowScheduling":true,"tags":["dataDisk"]}]'
   labels:
     node.longhorn.io/create-default-disk: 'config'
     storage: 'yes'
