@@ -17,17 +17,19 @@ spec:
       - name: postgres
         image: postgres:16.4
         env:
-          - name: PGUSER
-            valueFrom:
-              secretKeyRef:
-                name: postgres-secret
-                key: postgres-user
+          - name: POSTGRES_USER
+            value: "postgres"
+            # valueFrom:
+            #   secretKeyRef:
+            #     name: postgres-secret
+            #     key: postgres-user
           
-          - name: PGPASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: postgres-secret
-                key: postgres-password
+          - name: POSTGRES_PASSWORD
+            value: "pass"
+            # valueFrom:
+            #   secretKeyRef:
+            #     name: postgres-secret
+            #     key: postgres-password
 
           - name: KK_PASSWORD
             valueFrom:
