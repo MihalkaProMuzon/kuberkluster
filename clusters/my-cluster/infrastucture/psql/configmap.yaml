@@ -4,7 +4,7 @@ metadata:
   name: postgres-init-scripts
 data:
   init.sql: |
-    CREATE DATABASE main;
+    CREATE ROLE keycloak_usr WITH LOGIN CREATEDB CREATEROLE;
+    ALTER USER keycloak_usr WITH PASSWORD 'kk123';
     CREATE DATABASE keycloak;
-    CREATE USER keycloak_user WITH PASSWORD 'kk123';
-    GRANT ALL PRIVILEGES ON DATABASE keycloak TO keycloak_user;
+    GRANT ALL PRIVILEGES ON DATABASE "keycloak" to keycloak_usr;
