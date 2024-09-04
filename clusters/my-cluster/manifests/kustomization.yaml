@@ -8,7 +8,7 @@ resources:
   - longhorn.yaml
   - pgsql.yaml
   - pgadm.yaml
-  - keycloak.yaml
+  # - keycloak.yaml
 
   - headlamp.yaml
   # - prometeus.yaml
