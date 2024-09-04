@@ -4,14 +4,26 @@ metadata:
   name: postgres-init-scripts
 data:
   init.sql: |
+# CREATE USER keycloak_user WITH PASSWORD 'kk123';
+# CREATE DATABASE keycloak_db WITH OWNER keycloak_user;
+# GRANT ALL PRIVILEGES ON DATABASE keycloak_db TO keycloak_user;
+
+# \c keycloak_db;
+# GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO keycloak_user;
+# GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO keycloak_user;
+# GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public TO keycloak_user;
+
     CREATE USER keycloak_user WITH PASSWORD 'kk123';
     CREATE DATABASE keycloak_db WITH OWNER keycloak_user;
     GRANT ALL PRIVILEGES ON DATABASE keycloak_db TO keycloak_user;
 
-    \c keycloak_db;
-    GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO keycloak_user;
-    GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO keycloak_user;
-    GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public TO keycloak_user;
+    DO $$
+    BEGIN
+        EXECUTE 'GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO keycloak_user';
+        EXECUTE 'GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO keycloak_user';
+        EXECUTE 'GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public TO keycloak_user';
+    END $$;
+
 
 
 # ALTER USER keycloak_user WITH PASSWORD 'kk123';
