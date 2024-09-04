@@ -33,22 +33,13 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: postgres-secret
-                key: kk-password
+                key: KK_PASSWORD
 
           - name: POSTGRES_DB
             value: ""  # Оставьте пустым, чтобы избежать создания БД с именем пользовател
           
           - name: PGDATA
             value: /var/lib/postgresql/data/data/
-
-        # command: ["sh", "-c"]
-        # args:
-        #   - |
-        #     psql -U postgres <<-EOSQL
-        #       CREATE DATABASE keycloak;
-        #       CREATE USER keycloak_user WITH PASSWORD '\$KK_PASSWORD';
-        #       GRANT ALL PRIVILEGES ON DATABASE keycloak TO keycloak_user;
-        #     EOSQL
 
 
         ports:
@@ -57,9 +48,18 @@ spec:
         volumeMounts:
         - name: postgresdata
           mountPath: /var/lib/postgresql/data/
+        - name: init-scripts
+          mountPath: /docker-entrypoint-initdb.d
+
+      volumes:
+      - name: init-scripts
+        configMap:
+          name: postgres-init-scripts
+
 
       nodeSelector:
         storage: "yes"
+
 
 
   volumeClaimTemplates:
