@@ -8,4 +8,3 @@ data:
     CREATE DATABASE keycloak;
     CREATE USER keycloak_user WITH PASSWORD '${KK_PASSWORD}';
     GRANT ALL PRIVILEGES ON DATABASE keycloak TO keycloak_user;
-    DROP DATABASE admuser;

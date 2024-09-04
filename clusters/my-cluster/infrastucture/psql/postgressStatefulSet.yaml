@@ -35,8 +35,8 @@ spec:
                 name: postgres-secret
                 key: KK_PASSWORD
 
-          - name: POSTGRES_DB
-            value: ""  # Оставьте пустым, чтобы избежать создания БД с именем пользовател
+          # - name: POSTGRES_DB
+          #   value: ""  # Оставьте пустым, чтобы избежать создания БД с именем пользовател
           
           - name: PGDATA
             value: /var/lib/postgresql/data/data/
