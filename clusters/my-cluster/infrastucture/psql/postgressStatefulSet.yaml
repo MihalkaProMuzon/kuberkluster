@@ -19,26 +19,19 @@ spec:
         env:
           - name: POSTGRES_USER
             value: "postgres"
-            # valueFrom:
-            #   secretKeyRef:
-            #     name: postgres-secret
-            #     key: postgres-user
           
           - name: POSTGRES_PASSWORD
-            value: "pass"
-            # valueFrom:
-            #   secretKeyRef:
-            #     name: postgres-secret
-            #     key: postgres-password
+            # value: "pass"
+            valueFrom:
+              secretKeyRef:
+                name: postgres-secret
+                key: postgres-password
 
           - name: KK_PASSWORD
             valueFrom:
               secretKeyRef:
                 name: postgres-secret
                 key: KK_PASSWORD
-
-          # - name: POSTGRES_DB
-          #   value: ""  # Оставьте пустым, чтобы избежать создания БД с именем пользовател
           
           - name: PGDATA
             value: /var/lib/postgresql/data/data/
@@ -50,8 +43,8 @@ spec:
         volumeMounts:
         - name: postgresdata
           mountPath: /var/lib/postgresql/data/
-        # - name: init-scripts
-        #   mountPath: /docker-entrypoint-initdb.d
+        - name: init-scripts
+          mountPath: /docker-entrypoint-initdb.d
 
       volumes:
       - name: init-scripts
