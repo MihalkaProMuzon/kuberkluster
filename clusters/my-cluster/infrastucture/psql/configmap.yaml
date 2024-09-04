@@ -4,7 +4,19 @@ metadata:
   name: postgres-init-scripts
 data:
   init.sql: |
-    CREATE ROLE keycloak_usr WITH LOGIN CREATEDB CREATEROLE;
-    ALTER USER keycloak_usr WITH PASSWORD 'kk123';
-    CREATE DATABASE keycloak;
-    GRANT ALL PRIVILEGES ON DATABASE "keycloak" to keycloak_usr;
+    CREATE USER keycloak_user WITH PASSWORD 'kk123';
+    CREATE DATABASE keycloak_db WITH OWNER keycloak_user;
+    GRANT ALL PRIVILEGES ON DATABASE keycloak_db TO keycloak_user;
+
+    \c keycloak_db;
+    GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO keycloak_user;
+    GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO keycloak_user;
+    GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public TO keycloak_user;
+
+
+# ALTER USER keycloak_user WITH PASSWORD 'kk123';
+# CREATE DATABASE keycloak;
+# GRANT ALL PRIVILEGES ON DATABASE "keycloak" to keycloak_user;
+# GRANT ALL PRIVILEGES ON SCHEMA public TO keycloak_user;    
+# ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON TABLES TO keycloak_user;
+# ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON SEQUENCES TO keycloak_user;
