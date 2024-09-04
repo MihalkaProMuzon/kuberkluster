@@ -6,5 +6,5 @@ data:
   init.sql: |
     CREATE DATABASE main;
     CREATE DATABASE keycloak;
-    CREATE USER keycloak_user WITH PASSWORD '${KK_PASSWORD}';
+    CREATE USER keycloak_user WITH PASSWORD 'kk123';
     GRANT ALL PRIVILEGES ON DATABASE keycloak TO keycloak_user;

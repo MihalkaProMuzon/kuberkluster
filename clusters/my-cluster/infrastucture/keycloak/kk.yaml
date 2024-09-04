@@ -34,11 +34,11 @@ spec:
           value: "keycloak_user"
         
         - name: KC_DB_PASSWORD
-          value: "kk123"
-          # valueFrom:
-          #   secretKeyRef:
-          #     name: kk-secret
-          #     key: KC_DB_PASSWORD
+          #value: "kk123"
+          valueFrom:
+            secretKeyRef:
+              name: kk-secret
+              key: KC_DB_PASSWORD
         
         - name: KEYCLOAK_ADMIN
           valueFrom:
