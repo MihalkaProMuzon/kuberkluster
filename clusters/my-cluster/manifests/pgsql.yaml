@@ -4,7 +4,7 @@ metadata:
   name: psql
   namespace: flux-system
 spec:
-  interval: 5m30s
+  interval: 1m0s
   path: ./clusters/my-cluster/infrastucture/psql
   prune: true
   sourceRef:

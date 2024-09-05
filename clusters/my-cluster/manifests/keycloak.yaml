@@ -4,7 +4,7 @@ metadata:
   name: keycloak
   namespace: flux-system
 spec:
-  interval: 0m30s
+  interval: 1m00s
   path: ./clusters/my-cluster/infrastucture/keycloak
   prune: true
   sourceRef:
