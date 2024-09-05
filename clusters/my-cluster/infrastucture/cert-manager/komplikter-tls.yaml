@@ -25,8 +25,8 @@ spec:
 
   dnsNames:
     - komplikter.servehttp.com
-    - komplikter.servehttp-sub1.com
-    - komplikter.servehttp-sub2.com
+    - komplikter-sub1.servehttp.com
+    - komplikter-sub2.servehttp.com
 
   issuerRef:
     name: cissuer-letsencrypt-stage
