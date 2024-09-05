@@ -29,6 +29,7 @@ spec:
           value: "postgres"
         - name: KC_DB_URL
           value: "jdbc:postgresql://postgres-clusterip:5432/keycloak_db"
+        
         - name: KC_DB_USERNAME
           value: "keycloak_user"
         - name: KC_DB_PASSWORD
@@ -36,13 +37,12 @@ spec:
             secretKeyRef:
               name: kk-secret
               key: KC_DB_PASSWORD
-        
-          - name: KEYCLOAK_ADMIN
-              value: "admin"
-          - name: KEYCLOAK_ADMIN_PASSWORD
+        - name: KEYCLOAK_ADMIN
             value: "admin"
-          - name: KC_PROXY
-            value: "edge"
+        - name: KEYCLOAK_ADMIN_PASSWORD
+          value: "admin"
+        - name: KC_PROXY
+          value: "edge"
 
         # readinessProbe:
         #   httpGet:
