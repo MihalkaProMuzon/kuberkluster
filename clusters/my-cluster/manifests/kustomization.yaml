@@ -6,9 +6,10 @@ resources:
   - metallb.yaml
   - ingress-nginx.yaml
   - longhorn.yaml
-  - pgadm.yaml
-  - pgsql.yaml
-  - keycloak.yaml
+  
+  # - pgsql.yaml
+  # - pgadm.yaml
+  # - keycloak.yaml
 
   - headlamp.yaml
   # - prometeus.yaml
