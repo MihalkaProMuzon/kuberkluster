@@ -37,9 +37,8 @@ spec:
             secretKeyRef:
               name: jks-password-secret
               key: password-key
-
-
-          
+        - name: KC_HOSTNAME
+          value: "keycloak.local"
 
         - name: KC_DB
           value: "postgres"
