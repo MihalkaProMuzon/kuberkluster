@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
 - helm-man.yaml
 
-namespace: reflector
+# namespace: reflector
