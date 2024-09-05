@@ -18,5 +18,5 @@ resources:
   # - loki-stack.yaml
 
   # - exapp.yaml
-  # - lernapp.yaml
+  - lernapp.yaml
   # - flaga.yaml
