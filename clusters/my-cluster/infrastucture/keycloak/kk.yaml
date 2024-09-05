@@ -70,4 +70,4 @@ spec:
       volumes:
       - name: certs
         sercret:
-          name: tlss-secret
+          secretName: tlss-secret
