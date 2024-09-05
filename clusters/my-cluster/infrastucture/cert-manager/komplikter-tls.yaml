@@ -1,0 +1,40 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: komplikter-tls
+  namespace: cert-manager
+spec:
+  # Secret names are always required.
+  secretName: tlss-secret
+
+  # keystores allows adding additional output formats. This is an example for reference only.
+  keystores:
+    jks:
+      create: true
+      passwordSecretRef: # Password used to encrypt the keystore
+        key: password-key
+        name: jks-password-secret
+
+  duration: 2160h # 90d
+  renewBefore: 360h # 15d
+
+  isCA: false
+  usages:
+    - server auth
+    - client auth
+
+  dnsNames:
+    - komplikter.servehttp.com
+    - komplikter.servehttp-sub1.com
+    - komplikter.servehttp-sub2.com
+
+  issuerRef:
+    name: source-ca
+    kind: ClusterIssuer
+    group: cert-manager.io
+  secretTemplate:
+    annotations:
+      reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
+      reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: "keycloak"
+      reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
+      reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "keycloak"

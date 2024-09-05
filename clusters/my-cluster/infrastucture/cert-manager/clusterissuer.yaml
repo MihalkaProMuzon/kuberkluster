@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: cissuer-letsencrypt-stage
+  namespace: cert-manager
+spec:
+  acme:
+    email: ma.foshin@example.com
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: cissuer-letsencrypt-stage-secret
+    solvers:
+    - http01:
+        ingress:
+          ingressClassName: nginx
