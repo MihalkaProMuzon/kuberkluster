@@ -30,9 +30,8 @@ spec:
         - name: KC_DB_URL
           value: "jdbc:postgresql://postgres-clusterip:5432/keycloak_db"
         - name: KC_DB_USERNAME
-          value: "keycloak_user"
+          value: 'keycloak_user'
         - name: KC_DB_PASSWORD
-          # value: "kk123"
           valueFrom:
             secretKeyRef:
               name: kk-secret
