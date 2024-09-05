@@ -6,7 +6,8 @@ resources:
   - metallb.yaml
   - ingress-nginx.yaml
   - longhorn.yaml
-  
+  - cert-manager.yaml
+
   - pgsql.yaml
   - pgadm.yaml
   - keycloak.yaml
