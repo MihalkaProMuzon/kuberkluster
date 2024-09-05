@@ -7,8 +7,8 @@ resources:
   - ingress-nginx.yaml
   - longhorn.yaml
   - pgadm.yaml
-  # - pgsql.yaml
-  # - keycloak.yaml
+  - pgsql.yaml
+  - keycloak.yaml
 
   - headlamp.yaml
   # - prometeus.yaml
