@@ -32,7 +32,6 @@ spec:
         
         - name: KC_DB_USERNAME
           value: "keycloak_user"
-        
         - name: KC_DB_PASSWORD
           # value: "kk123"
           valueFrom:
@@ -40,20 +39,13 @@ spec:
               name: kk-secret
               key: KC_DB_PASSWORD
         
-        - name: KEYCLOAK_ADMIN
-          value: "adm"
-          # valueFrom:
-          #   secretKeyRef:
-          #     name: kk-secret
-          #     key: KEYCLOAK_ADMIN
-        
-        - name: KEYCLOAK_ADMIN_PASSWORD
-          value: "adm"
-          # valueFrom:
-          #   secretKeyRef:
-          #     name: kk-secret
-          #     key: KEYCLOAK_ADMIN_PASSWORD
-        
+          - name: KEYCLOAK_ADMIN
+              value: "admin"
+          - name: KEYCLOAK_ADMIN_PASSWORD
+            value: "admin"
+          - name: KC_PROXY
+            value: "edge"
+
         # readinessProbe:
         #   httpGet:
         #     path: /auth
