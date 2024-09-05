@@ -4,7 +4,7 @@ metadata:
   name: lernapp
   namespace: flux-system
 spec:
-  interval: 0m20s
+  interval: 1m0s
   path: ./clusters/my-cluster/apps/lern
   prune: true
   sourceRef:

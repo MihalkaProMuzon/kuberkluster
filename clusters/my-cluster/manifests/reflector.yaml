@@ -4,7 +4,7 @@ metadata:
   name: reflector
   namespace: flux-system
 spec:
-  interval: 5m0s
+  interval: 15m0s
   path: ./clusters/my-cluster/infrastucture/reflector
   prune: false
   sourceRef:
