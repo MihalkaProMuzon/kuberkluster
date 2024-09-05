@@ -35,6 +35,6 @@ spec:
   secretTemplate:
     annotations:
       reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
-      reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: "keycloak"
+      reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: "psql"
       reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
-      reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "keycloak"
+      reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "psql"
