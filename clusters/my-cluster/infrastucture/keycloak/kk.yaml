@@ -28,7 +28,18 @@ spec:
 
         - name: KC_HTTPS_PROTOCOLS
           value: "TLSv1.3,TLSv1.2"
+        #https-key-store-file
+        - name: KC_HTTPS_KEY_STORE_FILE
+          value: "/cert/keystore.jks"
+        #https-key-store-password
+        - name: KC_HTTPS_KEY_STORE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: jks-password-secret
+              key: password-key
 
+
+          
 
         - name: KC_DB
           value: "postgres"
@@ -53,9 +64,11 @@ spec:
               name: kk-secret
               key: keycloak-admin-pass
 
-        # readinessProbe:
-        #   httpGet:
-        #     path: /auth
-        #     port: 8080
-        #   initialDelaySeconds: 30
-        #   timeoutSeconds: 5
+        volumeMounts:
+          - name: certs
+            mountPath: /cert
+
+      volumes:
+      - name: certs
+        sercret:
+          name: tlss-secret
