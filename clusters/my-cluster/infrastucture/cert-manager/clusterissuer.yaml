@@ -5,7 +5,7 @@ metadata:
   namespace: cert-manager
 spec:
   acme:
-    email: ma.foshin@example.com
+    email: ma.foshin@mail.ru
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: cissuer-letsencrypt-stage-secret
