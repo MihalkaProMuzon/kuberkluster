@@ -11,6 +11,7 @@ resources:
   - pgsql.yaml
   - pgadm.yaml
   - keycloak.yaml
+  - reflector.yaml
 
   - headlamp.yaml
   # - prometeus.yaml
