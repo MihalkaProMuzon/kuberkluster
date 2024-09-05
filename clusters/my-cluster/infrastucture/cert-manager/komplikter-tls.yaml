@@ -29,7 +29,7 @@ spec:
     - komplikter.servehttp-sub2.com
 
   issuerRef:
-    name: source-ca
+    name: cissuer-letsencrypt-stage
     kind: ClusterIssuer
     group: cert-manager.io
   secretTemplate:
