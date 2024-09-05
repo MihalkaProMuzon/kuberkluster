@@ -41,12 +41,12 @@ spec:
           valueFrom:
             secretKeyRef:
               name: kk-secret
-              key: KEYCLOAK_ADMIN
+              key: keycloak-admin
         - name: KEYCLOAK_ADMIN_PASSWORD
           valueFrom:
             secretKeyRef:
               name: kk-secret
-              key: KEYCLOAK_ADMIN_PASSWORD
+              key: keycloak-admin-pass
 
         # readinessProbe:
         #   httpGet:
