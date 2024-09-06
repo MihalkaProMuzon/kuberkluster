@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
 - kk.yaml
 - svc.yaml
-# - ingress.yaml
+- ingress.yaml
 
 namespace: psql
