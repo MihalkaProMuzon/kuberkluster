@@ -8,12 +8,12 @@ metadata:
 spec:
   tls:
     - hosts:
-      - keycloak.local
+      - komplikter-sub1.servehttp.com
       secretName: tlss-secret
   ingressClassName: nginx
   rules:
-    - host: keycloak.local
-    - http:
+    - host: komplikter-sub1.servehttp.com
+      http:
         paths:
           - path: /
             pathType: Prefix
