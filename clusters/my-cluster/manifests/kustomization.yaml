@@ -12,6 +12,7 @@ resources:
   - pgadm.yaml
   - keycloak.yaml
   - reflector.yaml
+  - oauth2-proxy.yaml
 
   - headlamp.yaml
   # - prometeus.yaml
