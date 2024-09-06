@@ -9,7 +9,7 @@ spec:
   tls:
     - hosts:
       - komplikter-sub1.servehttp.com
-      secretName: tlss-secret
+      secretName: tlss-prod-secret
   ingressClassName: nginx
   rules:
     - host: komplikter-sub1.servehttp.com
