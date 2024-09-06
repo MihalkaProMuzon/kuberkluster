@@ -12,6 +12,7 @@ spec:
       secretName: tlss-secret
   ingressClassName: nginx
   rules:
+    - host: keycloak.local
     - http:
         paths:
           - path: /
