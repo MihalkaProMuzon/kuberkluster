@@ -7,4 +7,4 @@ resources:
 - komplikter-tls.yaml
 
 - clusterissuer-prod.yaml
-# - komplikter-tls-prod.yaml
+- komplikter-tls-prod.yaml
