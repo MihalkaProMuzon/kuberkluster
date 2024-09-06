@@ -17,6 +17,10 @@ spec:
       containers:
       - name: keycloak
         image: quay.io/keycloak/keycloak:25.0.4
+        volumeMounts:
+          - name: tls
+            mountPath: /etc/ssl
+            readOnly: true
         args: ["start"]
         ports:
         - containerPort: 8080
@@ -24,27 +28,18 @@ spec:
         - name: KC_HEALTH_ENABLED
           value: "true"
         - name: KC_METRICS_ENABLED
-          value: "true"
-
-        - name: KC_HTTPS_PROTOCOLS
-          value: "TLSv1.3,TLSv1.2"
-        #https-key-store-file
-        - name: KC_HTTPS_KEY_STORE_FILE
-          value: "/cert/keystore.jks"
-        #https-key-store-password
-        - name: KC_HTTPS_KEY_STORE_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: jks-password-secret
-              key: password-key
+          value: "true"        
         - name: KC_HOSTNAME
           value: "keycloak.local"
+        - name: KC_HOSTNAME_STRICT_HTTPS
+          value: "true"
+        - name: KC_PROXY
+          value: "edge"
 
         - name: KC_DB
           value: "postgres"
         - name: KC_DB_URL
-          value: "jdbc:postgresql://postgres-clusterip:5432/keycloak_db"
-        
+          value: "jdbc:postgresql://postgres-clusterip:5432/keycloak_db"        
         - name: KC_DB_USERNAME
           value: "keycloak_user"
         - name: KC_DB_PASSWORD
@@ -63,11 +58,20 @@ spec:
               name: kk-secret
               key: keycloak-admin-pass
 
-        volumeMounts:
-          - name: certs
-            mountPath: /cert
+        # - name: KC_HTTPS_PROTOCOLS
+        #   value: "TLSv1.3,TLSv1.2"
+        #https-key-store-file
+        # - name: KC_HTTPS_KEY_STORE_FILE
+        #   value: "/cert/keystore.jks"
+        #https-key-store-password
+        # - name: KC_HTTPS_KEY_STORE_PASSWORD
+        #   valueFrom:
+        #     secretKeyRef:
+        #       name: jks-password-secret
+        #       key: password-key
 
       volumes:
-      - name: certs
+      - name: tls
         sercret:
           secretName: tlss-secret
+          optional: false
