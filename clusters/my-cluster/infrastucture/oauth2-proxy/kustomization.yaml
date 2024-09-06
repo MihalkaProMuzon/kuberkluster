@@ -4,5 +4,3 @@ resources:
 - namespace.yaml  
 - helmrep.yaml
 - helmrel.yaml
-
-namespace: psql
