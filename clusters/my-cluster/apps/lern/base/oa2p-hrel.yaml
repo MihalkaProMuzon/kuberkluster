@@ -20,7 +20,7 @@ spec:
       provider: "kecloak"
       upstreams: 
         - "http://learn-app:80"
-      redirectURI: "http://your-oauth2-proxy:port/oauth2/callback"
+      redirectURI: "https://komplikter-sub1.servehttp.com/oauth2/callback"
       emailDomains: ["*"]
       enableBasicAuth: false
       setXAuthRequest: true
