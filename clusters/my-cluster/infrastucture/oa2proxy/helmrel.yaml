@@ -13,3 +13,8 @@ spec:
         name: oa2proxy-hrep
         namespace: oa2proxy
       interval: 1m
+  values:
+    config:
+      clientID: "oa2proxy"
+      clientSecret: "vf0GPf7BZcRFV9kcwU7rMXyaDCrks4nP"
+      # cookieSecret: "XXXXXXXXXXXXXXXX"
