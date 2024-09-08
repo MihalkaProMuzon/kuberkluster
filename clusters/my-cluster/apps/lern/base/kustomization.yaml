@@ -6,4 +6,6 @@ resources:
   - Service.yaml
   - ingress.yaml
 
+  - oa2p-hrel.yaml
+
 namespace: lernapp

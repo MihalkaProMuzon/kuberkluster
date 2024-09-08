@@ -1,0 +1,22 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: oa2proxy-hrel
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: oauth2-proxy
+      sourceRef:
+        kind: HelmRepository
+        name: oa2proxy-hrep
+        namespace: flux-system
+      interval: 1m
+  values:
+    configFile: |-
+      email_domains = [ "*" ]
+      upstreams = [ "learn-app-svc.lernapp.svc.cluster.local" ]
+      redirect_url = "https://komplikter.servehttp.com/oauth2/callback"
+      client_id = "lernapp"
+      client_secret = "kz38gFWakiOub5rJ6Unv30kdefe4lkTV"
+      cookie_secure = false
