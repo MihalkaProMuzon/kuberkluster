@@ -4,10 +4,10 @@ metadata:
   name: lern-ingr
   annotations:
     nginx.ingress.kubernetes.io/auth-type: "openid"
-    nginx.ingress.kubernetes.io/auth-openid-issuer: "http://keycloak:8080/realms/GAuth"
+    nginx.ingress.kubernetes.io/auth-openid-issuer: "https:///komplikter-sub1.servehttp.com/realms/GAuth"
     nginx.ingress.kubernetes.io/auth-openid-client-id: "lernapp"
     nginx.ingress.kubernetes.io/auth-openid-client-secret: "nKYF4jZ9ANj6GTCEOC8SEnLj69dLM0gU"
-    nginx.ingress.kubernetes.io/auth-openid-redirect-uri: "http://komplikter.servehttp.com/*"
+    nginx.ingress.kubernetes.io/auth-openid-redirect-uri: "https://komplikter.servehttp.com/*"
 
   # annotations:
     # nginx.ingress.kubernetes.io/auth-url: "http://komplikter-sub1.servehttp.com/auth/realms/GAuth/protocol/openid-connect/userinfo"
