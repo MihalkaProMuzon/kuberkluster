@@ -12,11 +12,27 @@ spec:
         name: oa2proxy-hrep
         namespace: flux-system
       interval: 1m
-  values:
-    configFile: |-
-      email_domains = [ "*" ]
-      upstreams = [ "learn-app-svc.lernapp.svc.cluster.local" ]
-      redirect_url = "https://komplikter.servehttp.com/oauth2/callback"
-      client_id = "lernapp"
-      client_secret = "kz38gFWakiOub5rJ6Unv30kdefe4lkTV"
-      cookie_secure = false
+  values:    
+    config:
+      clientID: "lernapp"
+      clientSecret: "kz38gFWakiOub5rJ6Unv30kdefe4lkTV"
+      cookieSecret: "qULOJLEHUMcNWRch-KUjSty6k3o-WG32j3EVIoQW3s4="
+      provider: "kecloak"
+      upstreams: 
+        - "http://learn-app:80"
+      redirectURI: "http://your-oauth2-proxy:port/oauth2/callback"
+      emailDomains: ["*"]
+      enableBasicAuth: false
+      setXAuthRequest: true
+
+    ingress:
+      enabled: true
+      hosts:
+        - host: komplikter.servehttp.com
+          paths:
+            - /
+      pathType: Prefix
+
+    service:
+      enabled: true
+      type: ClusterIP
