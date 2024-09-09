@@ -3,7 +3,7 @@ kind: HelmRelease
 metadata:
   name: oa2proxy-hrel
 spec:
-  interval: 1m
+  interval: 0m15s
   chart:
     spec:
       chart: oauth2-proxy
