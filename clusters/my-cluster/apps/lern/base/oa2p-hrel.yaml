@@ -71,4 +71,15 @@ spec:
 
     service:
       enabled: true
-      type: LoadBalancer
+      type: ClusterIP
+
+    ingress:
+      enabled: false
+      className: nginx
+      path: /
+      hosts:
+        - komplikter.servehttp.com
+      tls:
+        - hosts:
+          - komplikter.servehttp.com
+          secretName: tlss-prod-secret
