@@ -28,12 +28,10 @@ spec:
       value: "komplikter.servehttp.com"
       - name: OAUTH2_PROXY_CODE_CHALLENGE_METHOD
       value: "S256"
-
     # --redirect-url=https://internal.yourcompany.com/oauth2/callback
     # --oidc-issuer-url=https://<keycloak host>/realms/<your realm> // For Keycloak versions <17: --oidc-issuer-url=https://<keycloak host>/auth/realms/<your realm>
     # --email-domain=<yourcompany.com> // Validate email domain for users, see option documentation
-
-
+    
     service:
       enabled: true
       type: ClusterIP
