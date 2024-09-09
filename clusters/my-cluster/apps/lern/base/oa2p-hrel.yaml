@@ -15,12 +15,15 @@ spec:
   values:  
     configuration: 
       provider: keycloak-oidc
-      client-id: lernapp
-      client-secret: vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE
-      redirect-url: https://komplikter.servehttp.com/oauth2/callback
-      oidc-issuer-url: https://komplikter-sub1.servehttp.com/realms/kuberkluster
-      email-domain: komplikter.servehttp.com
-      code-challenge-method: S25
+      clientID: lernapp
+      clientSecret: vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE
+      redirectUrl: https://komplikter.servehttp.com/oauth2/callback
+      oidcIssuerUrl: https://komplikter-sub1.servehttp.com/realms/kuberkluster
+      content: |
+        email_domains = [ "*" ]
+        upstreams = [ "file:///dev/null" ]
+        code_challenge_method=S25
+        provider=keycloak-oidc
 
   #     - name: OAUTH2_PROXY_CLIENT_ID=lernapp
   #     value: "lernapp"
