@@ -3,10 +3,10 @@ kind: Ingress
 metadata:
   name: lern-ingr
   annotations:
-    nginx.ingress.kubernetes.io/auth-url: "http://oa2proxy-hrel-oauth2-proxy/oauth2/auth"
-    nginx.ingress.kubernetes.io/auth-signin: "http://oa2proxy-hrel-oauth2-proxy/oauth2/start?rd=$escaped_request_uri"
-    # nginx.ingress.kubernetes.io/auth-response-headers: "x-auth-request-user, x-auth-request-email, authorization"
+    nginx.ingress.kubernetes.io/auth-url: "http://192.163.0.243/oauth2/auth"
+    nginx.ingress.kubernetes.io/auth-signin: "http://192.163.0.243/oauth2/start?rd=$escaped_request_uri"
     nginx.ingress.kubernetes.io/proxy-buffer-size: "16k"
+    # nginx.ingress.kubernetes.io/auth-response-headers: "x-auth-request-user, x-auth-request-email, authorization"
 spec:
   tls:
     - hosts:
