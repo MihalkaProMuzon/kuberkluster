@@ -21,7 +21,7 @@ spec:
         provider = "keycloak-oidc"
         provider_display_name = "Keycloak"
         oidc_issuer_url = "https://komplikter-sub1.servehttp.com/realms/kuberkluster"
-        redirectUrl="https://komplikter.servehttp.com/oauth2/callback"
+        redirect_url="https://komplikter.servehttp.com/oauth2/callback"
         email_domains = [ "*" ]
         scope = "openid profile email"
         pass_authorization_header = true
