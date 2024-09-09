@@ -13,15 +13,14 @@ spec:
         namespace: flux-system
       interval: 1m
   values:  
-    config:
-      configFile: |-
-        provider=keycloak-oidc
-        client-id=lernapp
-        client-secret=vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE
-        redirect-url=https://komplikter.servehttp.com/oauth2/callback
-        oidc-issuer-url=https://komplikter-sub1.servehttp.com/realms/kuberkluster
-        email-domain=komplikter.servehttp.com
-        code-challenge-method=S256
+    config: |-
+      provider=keycloak-oidc
+      client-id=lernapp
+      client-secret=vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE
+      redirect-url=https://komplikter.servehttp.com/oauth2/callback
+      oidc-issuer-url=https://komplikter-sub1.servehttp.com/realms/kuberkluster
+      email-domain=komplikter.servehttp.com
+      code-challenge-method=S256
 
   #     - name: OAUTH2_PROXY_CLIENT_ID=lernapp
   #     value: "lernapp"
