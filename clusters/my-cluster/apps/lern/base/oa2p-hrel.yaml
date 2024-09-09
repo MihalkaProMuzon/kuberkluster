@@ -12,18 +12,27 @@ spec:
         name: oa2proxy-hrep
         namespace: flux-system
       interval: 1m
-  values:    
-    config:
-      clientID: "lernapp"
-      clientSecret: "kz38gFWakiOub5rJ6Unv30kdefe4lkTV"
-      cookieSecret: "qULOJLEHUMcNWRch-KUjSty6k3o-WG32j3EVIoQW3s4="
-      provider: "kecloak"
-      upstreams: 
-        - "http://learn-app-svc:80"
-      redirectURI: "https://komplikter-sub1.servehttp.com/oauth2/callback"
-      emailDomains: ["*"]
-      enableBasicAuth: false
-      setXAuthRequest: true
+  values:  
+    extraEnvVars:
+      - name: OAUTH2_PROXY_PROVIDER
+      value: "keycloak-oidc"
+      - name: OAUTH2_PROXY_CLIENT_ID
+      value: "lernapp"
+      - name: OAUTH2_PROXY_CLIENT_SECRET
+      value: "vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE"
+      - name: OAUTH2_PROXY_REDIRECT_URL
+      value: "https://komplikter.servehttp.com/oauth2/callback"
+      - name: OAUTH2_PROXY_OIDC_ISSUER_URL
+      value: "https://komplikter-sub1.servehttp.com/realms/kuberkluster"
+      - name: OAUTH2_PROXY_EMAIL_DOMAIN
+      value: "komplikter.servehttp.com"
+      - name: OAUTH2_PROXY_CODE_CHALLENGE_METHOD
+      value: "S256"
+
+    # --redirect-url=https://internal.yourcompany.com/oauth2/callback
+    # --oidc-issuer-url=https://<keycloak host>/realms/<your realm> // For Keycloak versions <17: --oidc-issuer-url=https://<keycloak host>/auth/realms/<your realm>
+    # --email-domain=<yourcompany.com> // Validate email domain for users, see option documentation
+
 
     service:
       enabled: true
