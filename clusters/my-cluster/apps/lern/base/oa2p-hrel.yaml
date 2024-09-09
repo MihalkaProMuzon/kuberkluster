@@ -71,4 +71,4 @@ spec:
 
     service:
       enabled: true
-      type: LoadBalancer
+      type: ClusterIP
