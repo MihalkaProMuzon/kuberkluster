@@ -14,24 +14,32 @@ spec:
       interval: 1m
   values:  
     config:
-      clientID: "lernapp"
-      clientSecret: "vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE"
-      cookieSecret: "S2JQRWJVVytudDJoTytmSjh5aWJOcEJaRXY2MS9ZZXM="
+      # clientID: "lernapp"
+      # clientSecret: "vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE"
+      # cookieSecret: "S2JQRWJVVytudDJoTytmSjh5aWJOcEJaRXY2MS9ZZXM="
+      # // For Keycloak versions <17: oidc-issuer-url=https://<keycloak host>/auth/realms/<your realm>
       configFile: |-
-        provider = "keycloak-oidc"
-        provider_display_name = "Keycloak"
-        oidc_issuer_url = "https://komplikter-sub1.servehttp.com/realms/kuberkluster"
-        redirect_url="https://komplikter.servehttp.com/oauth2/callback"
-        email_domains = [ "*" ]
-        scope = "openid profile email"
-        pass_authorization_header = true
-        pass_access_token = true
-        pass_user_headers = true
-        set_authorization_header = true
-        set_xauthrequest = true
-        cookie_refresh = "1m"
-        cookie_expire = "30m"
+        provider= "keycloak-oidc"
+        client_id= "lernapp"
+        client-secret= "vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE"
+        redirect-url= "https://komplikter.servehttp.com/oauth2/callback"
+        oidc-issuer-url= "https://komplikter-sub1.servehttp.com/realms/kuberkluster
+        email-domain = "komplikter.servehttp.com"
+        code-challenge-method = "S256"
 
+    # provider = "keycloak-oidc"
+    # provider_display_name = "Keycloak"
+    # oidc_issuer_url = "https://komplikter-sub1.servehttp.com/realms/kuberkluster"
+    # redirect_url="https://komplikter.servehttp.com/oauth2/callback"
+    # email_domains = [ "*" ]
+    # scope = "openid profile email"
+    # pass_authorization_header = true
+    # pass_access_token = true
+    # pass_user_headers = true
+    # set_authorization_header = true
+    # set_xauthrequest = true
+    # cookie_refresh = "1m"
+    # cookie_expire = "30m"
 
     # config: 
     #   configFile: |
