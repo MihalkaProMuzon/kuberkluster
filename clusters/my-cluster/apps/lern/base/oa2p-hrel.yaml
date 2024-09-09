@@ -24,7 +24,7 @@ spec:
         client_secret="vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE"
         redirect_url="https://komplikter.servehttp.com/oauth2/callback"
         oidc_issuer_url="https://komplikter-sub1.servehttp.com/realms/kuberkluster"
-        email_domain ="komplikter.servehttp.com"
+        email_domains = ["*"]
         code_challenge_method="S256"
 
     # provider = "keycloak-oidc"
