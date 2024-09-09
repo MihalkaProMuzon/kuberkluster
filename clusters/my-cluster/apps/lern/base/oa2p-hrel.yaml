@@ -76,7 +76,7 @@ spec:
     ingress:
       enabled: true
       className: nginx
-      path: /
+      path: /oauth2
       hosts:
         - komplikter.servehttp.com
       tls:
