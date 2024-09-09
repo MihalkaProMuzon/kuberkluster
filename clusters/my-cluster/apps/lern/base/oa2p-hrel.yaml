@@ -19,19 +19,11 @@ spec:
       cookieSecret: "qULOJLEHUMcNWRch-KUjSty6k3o-WG32j3EVIoQW3s4="
       provider: "kecloak"
       upstreams: 
-        - "http://learn-app:80"
+        - "http://learn-app-svc:80"
       redirectURI: "https://komplikter-sub1.servehttp.com/oauth2/callback"
       emailDomains: ["*"]
       enableBasicAuth: false
       setXAuthRequest: true
-
-    ingress:
-      enabled: true
-      hosts:
-        - host: komplikter.servehttp.com
-          paths:
-            - /
-      pathType: Prefix
 
     service:
       enabled: true
