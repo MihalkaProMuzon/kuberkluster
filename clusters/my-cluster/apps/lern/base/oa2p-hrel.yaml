@@ -13,16 +13,36 @@ spec:
         namespace: flux-system
       interval: 1m
   values:  
-    config: 
-      configFile: |
+    config:
+      clientID: "lernapp"
+      clientSecret: "vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE"
+      cookieSecret: "S2JQRWJVVytudDJoTytmSjh5aWJOcEJaRXY2MS9ZZXM="
+      configFile: |-
+        provider = "keycloak-oidc"
+        provider_display_name = "Keycloak"
+        oidc_issuer_url = "https://komplikter-sub1.servehttp.com/realms/kuberkluster"
+        redirectUrl="https://komplikter.servehttp.com/oauth2/callback"
         email_domains = [ "*" ]
-        code_challenge_method=S25
-        provider=keycloak-oidc
-        redirectUrl=https://komplikter.servehttp.com/oauth2/callback
-        oidcIssuerUrl=https://komplikter-sub1.servehttp.com/realms/kuberkluster
-        provider=keycloak-oidc
-        clientID=lernapp
-        clientSecret=vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE
+        scope = "openid profile email"
+        pass_authorization_header = true
+        pass_access_token = true
+        pass_user_headers = true
+        set_authorization_header = true
+        set_xauthrequest = true
+        cookie_refresh = "1m"
+        cookie_expire = "30m"
+
+
+    # config: 
+    #   configFile: |
+    #     email_domains = [ "*" ]
+    #     code_challenge_method=S25
+    #     provider=keycloak-oidc
+    #     redirectUrl=https://komplikter.servehttp.com/oauth2/callback
+    #     oidcIssuerUrl=https://komplikter-sub1.servehttp.com/realms/kuberkluster
+    #     provider=keycloak-oidc
+    #     clientID=
+    #     clientSecret=
 
   #     - name: OAUTH2_PROXY_CLIENT_ID=lernapp
   #     value: "lernapp"
