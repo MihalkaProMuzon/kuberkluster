@@ -16,7 +16,6 @@ spec:
     config: 
       configFile: |
         email_domains = [ "*" ]
-        upstreams = [ "file:///dev/null" ]
         code_challenge_method=S25
         provider=keycloak-oidc
         redirectUrl=https://komplikter.servehttp.com/oauth2/callback
