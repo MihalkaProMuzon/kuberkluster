@@ -14,19 +14,25 @@ spec:
       interval: 1m
   values:  
     extraEnvVars: [
-      "OAUTH2_PROXY_PROVIDER=keycloak-oidc"
+      "OAUTH2_PROXY_PROVIDER=keycloak-oidc",
+      "OAUTH2_PROXY_CLIENT_ID=lernapp",
+      "OAUTH2_PROXY_CLIENT_SECRET=vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE",
+      "OAUTH2_PROXY_REDIRECT_URL=https://komplikter.servehttp.com/oauth2/callback",
+      "OAUTH2_PROXY_OIDC_ISSUER_URL=https://komplikter-sub1.servehttp.com/realms/kuberkluster",
+      "OAUTH2_PROXY_EMAIL_DOMAIN=komplikter.servehttp.com",
+      "OAUTH2_PROXY_CODE_CHALLENGE_METHOD=S256"
     ]
-  #     - name: OAUTH2_PROXY_CLIENT_ID
+  #     - name: OAUTH2_PROXY_CLIENT_ID=lernapp
   #     value: "lernapp"
-  #     - name: OAUTH2_PROXY_CLIENT_SECRET
+  #     - name: OAUTH2_PROXY_CLIENT_SECRET=vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE
   #     value: "vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE"
-  #     - name: OAUTH2_PROXY_REDIRECT_URL
+  #     - name: OAUTH2_PROXY_REDIRECT_URL=https://komplikter.servehttp.com/oauth2/callback
   #     value: "https://komplikter.servehttp.com/oauth2/callback"
-  #     - name: OAUTH2_PROXY_OIDC_ISSUER_URL
+  #     - name: OAUTH2_PROXY_OIDC_ISSUER_URL=https://komplikter-sub1.servehttp.com/realms/kuberkluster
   #     value: "https://komplikter-sub1.servehttp.com/realms/kuberkluster"
-  #     - name: OAUTH2_PROXY_EMAIL_DOMAIN
+  #     - name: OAUTH2_PROXY_EMAIL_DOMAIN=komplikter.servehttp.com
   #     value: "komplikter.servehttp.com"
-  #     - name: OAUTH2_PROXY_CODE_CHALLENGE_METHOD
+  #     - name: OAUTH2_PROXY_CODE_CHALLENGE_METHOD=S256
   #     value: "S256"
     # --redirect-url=https://internal.yourcompany.com/oauth2/callback
     # --oidc-issuer-url=https://<keycloak host>/realms/<your realm> // For Keycloak versions <17: --oidc-issuer-url=https://<keycloak host>/auth/realms/<your realm>
