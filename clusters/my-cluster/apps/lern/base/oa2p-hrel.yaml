@@ -12,7 +12,7 @@ spec:
         name: oa2proxy-hrep
         namespace: flux-system
       interval: 1m
-  # values:  
+  values:  
   #   extraEnvVars:
   #     - name: OAUTH2_PROXY_PROVIDER
   #     value: "keycloak-oidc"
@@ -31,7 +31,7 @@ spec:
     # --redirect-url=https://internal.yourcompany.com/oauth2/callback
     # --oidc-issuer-url=https://<keycloak host>/realms/<your realm> // For Keycloak versions <17: --oidc-issuer-url=https://<keycloak host>/auth/realms/<your realm>
     # --email-domain=<yourcompany.com> // Validate email domain for users, see option documentation
-    
+
     service:
       enabled: true
       type: ClusterIP
