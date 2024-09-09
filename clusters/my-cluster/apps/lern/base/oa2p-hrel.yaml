@@ -13,15 +13,16 @@ spec:
         namespace: flux-system
       interval: 1m
   values:  
-    extraEnvVars: [
-      "OAUTH2_PROXY_PROVIDER=keycloak-oidc",
-      "OAUTH2_PROXY_CLIENT_ID=lernapp",
-      "OAUTH2_PROXY_CLIENT_SECRET=vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE",
-      "OAUTH2_PROXY_REDIRECT_URL=https://komplikter.servehttp.com/oauth2/callback",
-      "OAUTH2_PROXY_OIDC_ISSUER_URL=https://komplikter-sub1.servehttp.com/realms/kuberkluster",
-      "OAUTH2_PROXY_EMAIL_DOMAIN=komplikter.servehttp.com",
-      "OAUTH2_PROXY_CODE_CHALLENGE_METHOD=S256"
-    ]
+    config:
+      configFile: |-
+        provider=keycloak-oidc
+        client-id=lernapp
+        client-secret=vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE
+        redirect-url=https://komplikter.servehttp.com/oauth2/callback
+        oidc-issuer-url=https://komplikter-sub1.servehttp.com/realms/kuberkluster
+        email-domain=komplikter.servehttp.com
+        code-challenge-method=S256
+
   #     - name: OAUTH2_PROXY_CLIENT_ID=lernapp
   #     value: "lernapp"
   #     - name: OAUTH2_PROXY_CLIENT_SECRET=vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE
