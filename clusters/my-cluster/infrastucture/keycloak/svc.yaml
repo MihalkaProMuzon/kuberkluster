@@ -5,9 +5,11 @@ metadata:
 spec:
   ports:
   - port: 443
+    name: https
     targetPort: 8080
   - port: 80
+    name: http
     targetPort: 8080
   selector:
     app: keycloak
-  type: LoadBalancer
+  type: ClusterIP
