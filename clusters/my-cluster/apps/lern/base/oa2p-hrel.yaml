@@ -15,7 +15,7 @@ spec:
   values:  
     config:
       clientID: "lapp1"
-      clientSecret: "fApwPqipn2gDy8jq3dvwSvm4qVh7V8jm"
+      clientSecret: "T69R2c4cnTTIIc8goDpEnCECPe4fdCKv"
       # cookieSecret: "S2JQRWJVVytudDJoTytmSjh5aWJOcEJaRXY2MS9ZZXM="
       # oidc-issuer-url=https://<keycloak host>/realms/<your realm>
       configFile: |
