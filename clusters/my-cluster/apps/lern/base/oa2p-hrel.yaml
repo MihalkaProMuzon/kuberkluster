@@ -21,7 +21,7 @@ spec:
       configFile: |-
         provider="keycloak-oidc"
         redirect_url="https://komplikter.servehttp.com/oauth2/callback"
-        oidc_issuer_url="http://192.168.0.241/realms/kuberkluster"
+        oidc_issuer_url="http://192.168.0.241:443/realms/kuberkluster"
         email_domains = ["*"] 
         code_challenge_method="S256"
 
