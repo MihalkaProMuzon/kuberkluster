@@ -14,14 +14,12 @@ spec:
       interval: 1m
   values:  
     config:
-      clientID: "lernapp"
-      clientSecret: "vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE"
+      clientID: "lapp"
+      clientSecret: "ecfJczt9f4BCALbUnhv2NvfjNCEot717"
       cookieSecret: "S2JQRWJVVytudDJoTytmSjh5aWJOcEJaRXY2MS9ZZXM="
       # // For Keycloak versions <17: oidc-issuer-url=https://<keycloak host>/auth/realms/<your realm>
     extraArgs:
       - --provider=keycloak-oidc
-      - --client-id=lapp
-      - --client-secret=ecfJczt9f4BCALbUnhv2NvfjNCEot717
       - --redirect-url=https://komplikter.servehttp.com/oauth2/callback
       - --oidc-issuer-url=https://komplikter-sub1.servehttp.com/realms/kuberkluster
       - --email-domain=*
