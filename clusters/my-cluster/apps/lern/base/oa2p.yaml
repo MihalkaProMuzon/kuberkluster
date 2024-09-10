@@ -26,8 +26,9 @@ spec:
         - --client-id=lapp
         - --client-secret=ecfJczt9f4BCALbUnhv2NvfjNCEot717
         - --redirect-url=https://komplikter.servehttp.com/oauth2/callback
-        - --oidc-issuer-url=http://komplikter-sub1.servehttp.com/realms/kuberkluster
+        - --oidc-issuer-url=http://komplikter-sub1.servehttp.com/realms/kkluster
         - --email-domain=*
+        # - --code-challenge-method=S256
 
         env:
         # - name: OAUTH2_PROXY_CLIENT_ID
