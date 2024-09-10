@@ -27,7 +27,7 @@ spec:
         - --client-secret=wXMJR3PqF6xvLDzMmqcLg0PV8csBX3yY
         - --redirect-url=https://komplikter.servehttp.com/oauth2/callback
         - --oidc-issuer-url=https://komplikter-sub1.servehttp.com/realms/kuberkluster
-        - --email-domain=["*"]
+        - --email-domain=*
         - --code-challenge-method=S256
 
         env:
