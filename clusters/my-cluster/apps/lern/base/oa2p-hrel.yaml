@@ -20,7 +20,7 @@ spec:
       # oidc-issuer-url=https://<keycloak host>/realms/<your realm>
       configFile: |
         email_domains = [ "*" ]
-        code_challenge_method=S25
+        code_challenge_method=S256
         provider=keycloak-oidc
         redirectUrl=https://komplikter.servehttp.com/oauth2/callback
         oidcIssuerUrl=https://komplikter-sub1.servehttp.com/realms/kuberkluster
