@@ -16,24 +16,20 @@ spec:
     spec:
       containers:
       - args:
-        - --provider=keycloak-oidc
+        - --provider=github
         - --email-domain=*
         - --upstream=file:///dev/null
         - --http-address=0.0.0.0:4180
-        - 
         # Register a new application
         # https://github.com/settings/applications/new
         env:
         - name: OAUTH2_PROXY_CLIENT_ID
-          value: <Client ID>
+          value: Ov23liofkJExnVEnCQ6c
         - name: OAUTH2_PROXY_CLIENT_SECRET
           value: <Client Secret>
         # docker run -ti --rm python:3-alpine python -c 'import secrets,base64; print(base64.b64encode(base64.b64encode(secrets.token_bytes(16))));'
         - name: OAUTH2_PROXY_COOKIE_SECRET
-          value: SECRET
-        # Recommended: remove email-domain=* in args and set an allowlist
-        # - name: OAUTH2_PROXY_GITHUB_USERS
-        #   value: alice,bob
+          value: 1870bd0dd60bda23e109345608626c91e0ef0871
         image: quay.io/oauth2-proxy/oauth2-proxy:latest
         imagePullPolicy: Always
         name: oauth2-proxy
@@ -49,7 +45,6 @@ metadata:
   labels:
     k8s-app: oauth2-proxy
   name: oauth2-proxy
-  namespace: kube-system
 spec:
   ports:
   - name: http
@@ -68,7 +63,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: __INGRESS_HOST__
+  - host: komplikter.servehttp.com
     http:
       paths:
       - path: /oauth2
@@ -80,8 +75,8 @@ spec:
               number: 4180
   tls:
   - hosts:
-    - __INGRESS_HOST__
-    secretName: __INGRESS_SECRET__
+    - komplikter.servehttp.com
+    secretName: tlss-prod-secret
 
 ---
 
@@ -95,13 +90,13 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: __INGRESS_HOST__
+  - host: komplikter.servehttp.com
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: kubernetes-dashboard
+            name: learn-app-svc
             port:
               number: 80
