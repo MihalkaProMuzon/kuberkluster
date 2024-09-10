@@ -26,7 +26,7 @@ spec:
         - --client-id=lernapp
         - --client-secret=YgxIyk5ltprcJMfPdq8SrH6Z97T5dF2v
         # - --redirect-url=https://komplikter.servehttp.com/oauth2/callback
-        - --oidc-issuer-url=https://10.43.63.137/realms/kuberkluster
+        - --oidc-issuer-url=https://10.43.63.137:443/realms/kuberkluster
         - --email-domain=*
         - --code-challenge-method=S256
 
