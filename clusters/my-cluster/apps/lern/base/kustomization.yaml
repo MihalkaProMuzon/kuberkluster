@@ -5,8 +5,8 @@ resources:
   - Deployment.yaml
   - Service.yaml
   # - ingress.yaml
-  # - oa2p.yaml
+  - oa2p.yaml
 
-  - oa2p-hrel.yaml
+  # - oa2p-hrel.yaml
 
 namespace: lernapp
