@@ -25,7 +25,7 @@ spec:
         - --provider=keycloak-oidc
         - --client-id=lernapp2
         - --client-secret=yDvPtWmP3aW5i3JNd62CugpkagvKJWPi
-        - --redirect-url=https://komplikter.servehttp.com/oauth2/callback
+        # - --redirect-url=https://komplikter.servehttp.com/oauth2/callback
         - --oidc-issuer-url=https://komplikter-sub1.servehttp.com/realms/kuberkluster
         - --email-domain=*
         - --code-challenge-method=S256
