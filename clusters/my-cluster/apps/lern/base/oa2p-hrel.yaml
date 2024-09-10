@@ -26,6 +26,8 @@ spec:
       - --oidc-issuer-url=https://komplikter-sub1.servehttp.com/realms/kuberkluster
       - --email-domain=*
       - --code-challenge-method=S256
+      - --pass-authorization-header=true
+      - --pass-access-token=true
 
     # client_id="lernapp"
     # client_secret="vfgt5VJ81mffCxLW4xIfn9DE0KVu9USE"
