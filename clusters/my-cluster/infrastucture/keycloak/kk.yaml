@@ -21,7 +21,7 @@ spec:
           - name: tls
             mountPath: /etc/ssl
             readOnly: true
-        args: ["start-dev"]
+        args: ["start"]
         ports:
         - containerPort: 8080
         env:
