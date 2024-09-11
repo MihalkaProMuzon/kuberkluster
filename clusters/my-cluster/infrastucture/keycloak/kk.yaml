@@ -29,10 +29,10 @@ spec:
           value: "true"
         - name: KC_METRICS_ENABLED
           value: "true"        
-        # - name: KC_HOSTNAME
-        #   value: "komplikter-sub1.servehttp.com"
-        # - name: KC_HOSTNAME_STRICT_HTTPS
-        #   value: "true"
+        - name: KC_HOSTNAME
+          value: "komplikter-sub1.servehttp.com"
+        - name: KC_HOSTNAME_STRICT_HTTPS
+          value: "true"
         - name: KC_PROXY
           value: "edge"
 
