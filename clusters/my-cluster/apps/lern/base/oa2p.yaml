@@ -61,11 +61,13 @@ spec:
     k8s-app: oauth2-proxy
 
 ---
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: oauth2-proxy
+  name: lernapp-oauth2
+  annotations:
+    nginx.ingress.kubernetes.io/auth-url: "https://$host/oauth2/auth"
+    nginx.ingress.kubernetes.io/auth-signin: "https://$host/oauth2/start?rd=$escaped_request_uri"
 spec:
   ingressClassName: nginx
   rules:
@@ -79,26 +81,6 @@ spec:
             name: oauth2-proxy
             port:
               number: 4180
-  tls:
-  - hosts:
-    - komplikter.servehttp.com
-    secretName: tlss-prod-secret
-
----
-
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  annotations:
-    nginx.ingress.kubernetes.io/auth-url: "https://$host/oauth2/auth"
-    nginx.ingress.kubernetes.io/auth-signin: "https://$host/oauth2/start?rd=$escaped_request_uri"
-  name: external-auth-oauth2
-spec:
-  ingressClassName: nginx
-  rules:
-  - host: komplikter.servehttp.com
-    http:
-      paths:
       - path: /
         pathType: Prefix
         backend:
@@ -106,3 +88,7 @@ spec:
             name: learn-app-svc
             port:
               number: 80
+  tls:
+  - hosts:
+    - komplikter.servehttp.com
+    secretName: tlss-prod-secret
