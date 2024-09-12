@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: flaskapp-dep
+
+  labels:
+    app: flaskapp
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flaskapp
+
+  template:
+    metadata:
+      labels:
+        app: flaskapp
+    spec:
+      containers:
+      - name: flaskapp-container
+        image: mihalkapromzona/flaga:x11
+        ports:
+        - containerPort: 5000
+        env:
+          - name: KK_SERVER_URL
+            value: "https://komplikter-sub1.servehttp.com"
+          - name: KK_CLIENT_ID
+            value: "flaskapp"
+          - name: KK_REALM_NAME
+            value: "kuberkluster"
+          - name: KK_CLIENT_SECRET_KEY
+            valueFrom:
+            secretKeyRef:
+              name: flask-secret
+              key: KK_CLIENT_SECRET_KEY

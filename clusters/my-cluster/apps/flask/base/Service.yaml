@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flaga-service
+  name: flaskapp-service
 spec:
   selector:
-    app: flaga
+    app: flaskapp
   ports:
     - name: flask-port
       protocol: TCP
-      port: 80
+      port: 443
       targetPort: 5000
-  type: LoadBalancer
+  type: ClusterIP

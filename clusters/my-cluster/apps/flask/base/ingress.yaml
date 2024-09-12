@@ -1,19 +1,21 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ngr
-  # annotations:
-    # cert-manager.io/issuer: letsencrypt-prod
+  name: flaskapp-ingress
 spec:
   ingressClassName: nginx
   rules:
-    - host: komplikter.servehttp.com
+    - host: komplikter-sub2.servehttp.com
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: flaga-service
+                name: flaskapp-service
                 port:
-                  number: 80
+                  number: 443
+   tls:
+    - hosts:
+      - komplikter-sub2.servehttp.com
+      secretName: tlss-prod-secret

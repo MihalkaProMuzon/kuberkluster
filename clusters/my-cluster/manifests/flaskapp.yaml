@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 0m30s
-  path: ./clusters/my-cluster/apps/flaga
+  path: ./clusters/my-cluster/apps/flask
   prune: true
   sourceRef:
     kind: GitRepository

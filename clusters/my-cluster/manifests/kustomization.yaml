@@ -20,4 +20,4 @@ resources:
 
   # - exapp.yaml
   - lernapp.yaml
-  # - flaga.yaml
+  - flaskapp.yaml
