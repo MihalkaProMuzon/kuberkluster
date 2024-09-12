@@ -4,8 +4,8 @@ resources:
   - Namespace.yaml
   - Deployment.yaml
   - Service.yaml
-  # - ingress.yaml
-  - oa2p.yaml
+  - ingress.yaml
+  # - oa2p.yaml
 
   # - oa2p-hrel.yaml
 
