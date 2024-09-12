@@ -32,6 +32,6 @@ spec:
             value: "kuberkluster"
           - name: KK_CLIENT_SECRET_KEY
             valueFrom:
-            secretKeyRef:
-              name: flask-secret
-              key: kk_client_secret
+              secretKeyRef:
+                name: flask-secret
+                key: kk_client_secret
