@@ -2,11 +2,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: lern-ingr
-  # annotations:
-  #   nginx.ingress.kubernetes.io/auth-response-headers: "Authorization"
-  #   nginx.ingress.kubernetes.io/auth-signin: "https://komplikter.servehttp.com/oauth2/start?rd=$escaped_request_uri"
-  #   nginx.ingress.kubernetes.io/auth-url: "https://komplikter.servehttp.com/oauth2/auth"
-
+  annotations:
+    nginx.ingress.kubernetes.io/auth-url: "https://$host/oauth2/auth"
+    nginx.ingress.kubernetes.io/auth-signin: "https://$host/oauth2/start?rd=$escaped_request_uri"
 spec:
   tls:
     - hosts:
