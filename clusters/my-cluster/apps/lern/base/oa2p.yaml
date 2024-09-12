@@ -99,7 +99,7 @@ spec:
   - host: komplikter.servehttp.com
     http:
       paths:
-      - path: /oauth2/callback
+      - path: /
         pathType: Prefix
         backend:
           service:
