@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: flaskapp-container
-        image: mihalkapromzona/flaga:x-ao2-1
+        image: mihalkapromzona/flaga:x-ao2-v1
         ports:
         - containerPort: 5000
         env:
