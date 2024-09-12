@@ -4,6 +4,10 @@ metadata:
   name: flaskapp-ingress
 spec:
   ingressClassName: nginx
+  tls:
+    - hosts:
+      - komplikter-sub2.servehttp.com
+      secretName: tlss-prod-secret
   rules:
     - host: komplikter-sub2.servehttp.com
       http:
@@ -15,7 +19,3 @@ spec:
                 name: flaskapp-service
                 port:
                   number: 443
-   tls:
-    - hosts:
-      - komplikter-sub2.servehttp.com
-      secretName: tlss-prod-secret
