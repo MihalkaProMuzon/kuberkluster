@@ -34,4 +34,4 @@ spec:
             valueFrom:
             secretKeyRef:
               name: flask-secret
-              key: KK_CLIENT_SECRET_KEY
+              key: kk_client_secret
