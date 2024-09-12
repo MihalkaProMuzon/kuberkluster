@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: flaskapp-container
-        image: mihalkapromzona/flaga:x11
+        image: mihalkapromzona/flaga:x-ao2-1
         ports:
         - containerPort: 5000
         env:
@@ -30,6 +30,8 @@ spec:
             value: "flaskapp"
           - name: KK_REALM_NAME
             value: "kuberkluster"
+          - name: HOST_URL
+            value: "https://komplikter-sub2.servehttp.com"
           - name: KK_CLIENT_SECRET_KEY
             valueFrom:
               secretKeyRef:
