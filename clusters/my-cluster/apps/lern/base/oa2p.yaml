@@ -28,6 +28,7 @@ spec:
         - --email-domain=*
         - --code-challenge-method=S256
         - --http-address=0.0.0.0:4180
+        - --insecure-oidc-allow-unverified-email=true
 
         env:
         - name: OAUTH2_PROXY_CLIENT_ID
