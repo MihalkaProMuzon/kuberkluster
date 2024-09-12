@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: learn-app-container
-        image: mihalkapromzona/test:bodan
+        image: mihalkapromzona/test:oa2
         ports:
         - containerPort: 80
