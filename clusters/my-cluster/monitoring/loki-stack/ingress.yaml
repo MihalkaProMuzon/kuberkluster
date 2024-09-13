@@ -7,7 +7,7 @@ spec:
   tls:
     - hosts:
       - komplikter-sub3.servehttp.com
-      secretName: tlss-sub3-stage-secret
+      secretName: tlss-sub3-prod-secret
   rules:
     - host: komplikter-sub3.servehttp.com
       http:
