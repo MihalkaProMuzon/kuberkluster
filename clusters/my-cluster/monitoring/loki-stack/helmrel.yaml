@@ -40,7 +40,7 @@ spec:
         clients:
           - url: http://{{ .Release.Name }}:3100/loki/api/v1/push
     grafana:
-      enabled: false
+      enabled: true
       sidecar:
         datasources:
           label: ""
@@ -51,7 +51,7 @@ spec:
         tag: 10.3.3
 
     prometheus:
-      enabled: false
+      enabled: true
       isDefault: false
       url: http://{{ include "prometheus.fullname" .}}:{{ .Values.prometheus.server.service.servicePort }}{{ .Values.prometheus.server.prefixURL }}
       datasource:
