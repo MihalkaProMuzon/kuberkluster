@@ -4,7 +4,7 @@ resources:
   - Namespace.yaml
   - helmrep.yaml
   - helmrel.yaml
-  # - svc.yaml
-  # - ingress.yaml
+  - ingress.yaml
+  - svc.yaml
 
 namespace: monitoring

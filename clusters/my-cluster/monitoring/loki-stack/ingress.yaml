@@ -2,19 +2,20 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: grafana
-  # annotations:
-    # cert-manager.io/issuer: letsencrypt-prod
-    # nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
+  tls:
+    - hosts:
+      - komplikter.ydns.eu
+      secretName: tlss-ydns-prod-secret
   rules:
-    - host: komplikter.servehttp.com
+    - host: komplikter.ydns.eu
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: grafana-svc
+                name: loki-stack-grafana-tls-svc
                 port:
-                  number: 80
+                  number: 443
