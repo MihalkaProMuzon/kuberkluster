@@ -6,10 +6,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-      - komplikter.ydns.eu
-      secretName: tlss-ydns-prod-secret
+      - komplikter-sub3.servehttp.com
+      secretName: tlss-sub3-stage-secret
   rules:
-    - host: komplikter.ydns.eu
+    - host: komplikter-sub3.servehttp.com
       http:
         paths:
           - path: /

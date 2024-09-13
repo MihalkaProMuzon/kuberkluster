@@ -8,4 +8,4 @@ resources:
 
 - clusterissuer-prod.yaml
 - komplikter-tls-prod.yaml
-- komplikter-ydns-tls-prod.yaml
+- komplikter-sub3-tls.yaml
