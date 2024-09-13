@@ -18,7 +18,7 @@ spec:
     - komplikter-sub3.servehttp.com
 
   issuerRef:
-    name: cissuer-letsencrypt-stage
+    name: cissuer-letsencrypt
     kind: ClusterIssuer
     group: cert-manager.io
   secretTemplate:
