@@ -10,16 +10,9 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: grafana-rep
-        namespace: flux-system
+        namespace: monitoring
       interval: 1m
   values:
-
-    prometheus:
-      enabled: true
-      isDefault: false
-      url: http://{{ include "prometheus.fullname" .}}:{{ .Values.prometheus.server.service.servicePort }}{{ .Values.prometheus.server.prefixURL }}
-      datasource:
-        jsonData: "{}"
 
     loki:
       enabled: true
@@ -46,9 +39,8 @@ spec:
         serverPort: 3101
         clients:
           - url: http://{{ .Release.Name }}:3100/loki/api/v1/push
-
     grafana:
-      enabled: true 
+      enabled: false
       sidecar:
         datasources:
           label: ""
@@ -56,4 +48,11 @@ spec:
           enabled: true
           maxLines: 1000
       image:
-        tag: 10.0.2
+        tag: 10.3.3
+
+    prometheus:
+      enabled: false
+      isDefault: false
+      url: http://{{ include "prometheus.fullname" .}}:{{ .Values.prometheus.server.service.servicePort }}{{ .Values.prometheus.server.prefixURL }}
+      datasource:
+        jsonData: "{}"

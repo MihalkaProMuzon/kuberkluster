@@ -16,7 +16,7 @@ resources:
 
   - headlamp.yaml
   # - prometeus.yaml
-  # - loki-stack.yaml
+  - loki-stack.yaml
 
   # - exapp.yaml
   - lernapp.yaml
