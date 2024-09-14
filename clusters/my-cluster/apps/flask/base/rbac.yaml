@@ -25,4 +25,4 @@ metadata:
   namespace: flaskapp
 type: kubernetes.io/service-account-token
 annotations:
-  kubernetes.io/service-account.name: flaskapp-sa
+  kubernetes.io/service-account.name: "flaskapp-sa"
