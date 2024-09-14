@@ -16,3 +16,13 @@ subjects:
 - kind: ServiceAccount
   name: flask-app-sa
   namespace: flaskapp
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: flaskapp-sa-secret
+  namespace: flaskapp
+type: kubernetes.io/service-account-token
+annotations:
+  kubernetes.io/service-account.name: flaskapp-sa
