@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: headlamp-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  # tls:
+  #   - hosts:
+  #     - komplikter-sub2.servehttp.com
+  #     secretName: tlss-sub3-prod-secret
+  rules:
+    - host: komplikter-sub2.servehttp.com
+      http:
+        paths:
+          - path: /headlamp
+            pathType: Prefix
+            backend:
+              service:
+                name: headlamp-lb
+                port:
+                  number: 80
