@@ -2,31 +2,16 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: flaskapp-sa
-  namespace: flaskapp
+
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
+kind: ClusterRoleBinding
 metadata:
-  name: flaskapp-role
-  namespace: flaskapp
-rules:
-  - apiGroups: ["authentication.k8s.io"]
-    resources: ["tokenrequests"]
-    verbs: ["create"]
-  - apiGroups: [""]
-    resources: ["serviceaccounts", "serviceaccounts/token"]
-    verbs: ["get", "list", "create"]
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
-metadata:
-  name: flaskapp-rolebinding
-  namespace: flaskapp
-subjects:
-  - kind: ServiceAccount
-    name: flaskapp-sa
-    namespace: flaskapp
+  name: flask-app-admin
 roleRef:
-  kind: Role
-  name: flaskapp-role
   apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: flask-app-sa
