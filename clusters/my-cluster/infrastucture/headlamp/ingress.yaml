@@ -12,10 +12,10 @@ spec:
   #     - komplikter-sub2.servehttp.com
   #     secretName: tlss-sub3-prod-secret
   rules:
-    - host: komplikter-sub2.servehttp.com
+    - host: komplikter.ydns.eu
       http:
         paths:
-          - path: /headlamp
+          - path: /
             pathType: Prefix
             backend:
               service:
