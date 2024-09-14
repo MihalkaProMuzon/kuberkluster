@@ -21,20 +21,46 @@ spec:
       serviceAccountName: flaskapp-sa
       containers:
       - name: flaskapp-container
-        image: mihalkapromzona/flaga:r1
+        image: mihalkapromzona/flaga:r1-2
         ports:
         - containerPort: 5000
         env:
           - name: KK_SERVER_URL
             value: "https://komplikter-sub1.servehttp.com"
-          - name: KK_CLIENT_ID
+
+          - name: GRAFANA_URL
+            value: "https://komplikter-sub1.servehttp.com"
+          - name: GRAFANA_USER
+            valueFrom:
+              secretKeyRef:
+                name: flask-secret
+                key: grafana-user
+          - name: GRAFANA_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: flask-secret
+                key: grafana-password
+
+          - name: APP_SECRET_KEY
+            valueFrom:
+              secretKeyRef:
+                name: flask-secret
+                key: app-secret-key
+
+          - name: KK_CLIENT_ID 
             value: "flaskapp"
           - name: KK_REALM_NAME
             value: "kuberkluster"
-          # - name: HOST_URL
-          #   value: "https://komplikter-sub2.servehttp.com"
           - name: KK_CLIENT_SECRET_KEY
             valueFrom:
               secretKeyRef:
                 name: flask-secret
-                key: kk_client_secret
+                key: kk-client-secret-key
+
+          - name: HEADLAMP_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: flask-secret
+                key: headlamp-token
+
+            
