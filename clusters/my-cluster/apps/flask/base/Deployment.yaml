@@ -28,7 +28,7 @@ spec:
             value: "https://komplikter-sub1.servehttp.com"
 
           - name: GRAFANA_URL
-            value: "https://komplikter-sub1.servehttp.com"
+            value: "https://komplikter-sub3.servehttp.com"
           - name: GRAFANA_USER
             valueFrom:
               secretKeyRef:
