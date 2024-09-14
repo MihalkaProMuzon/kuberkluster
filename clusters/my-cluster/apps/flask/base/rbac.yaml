@@ -11,8 +11,11 @@ metadata:
   namespace: flaskapp
 rules:
   - apiGroups: ["authentication.k8s.io"]
-    resources: ["tokens"]
+    resources: ["tokenrequests"]
     verbs: ["create"]
+  - apiGroups: [""]
+    resources: ["serviceaccounts"]
+    verbs: ["get", "list"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
