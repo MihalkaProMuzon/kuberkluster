@@ -18,6 +18,7 @@ spec:
       labels:
         app: flaskapp
     spec:
+      serviceAccountName: flask-app-sa
       containers:
       - name: flaskapp-container
         image: mihalkapromzona/flaga:hlt2
