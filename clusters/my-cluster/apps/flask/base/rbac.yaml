@@ -23,6 +23,6 @@ kind: Secret
 metadata:
   name: flaskapp-sa-secret
   namespace: flaskapp
+  annotations:
+    kubernetes.io/service-account.name: "flaskapp-sa"
 type: kubernetes.io/service-account-token
-annotations:
-  kubernetes.io/service-account.name: "flaskapp-sa"
