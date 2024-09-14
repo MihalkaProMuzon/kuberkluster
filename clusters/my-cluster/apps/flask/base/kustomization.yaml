@@ -6,6 +6,6 @@ resources:
   - Service.yaml
   - ingress.yaml
 
-  - rbac.yaml
+  # - rbac.yaml
 
 namespace: flaskapp
