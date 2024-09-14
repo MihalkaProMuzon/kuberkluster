@@ -21,7 +21,7 @@ spec:
       serviceAccountName: flaskapp-sa
       containers:
       - name: flaskapp-container
-        image: mihalkapromzona/flaga:hlt11
+        image: mihalkapromzona/flaga:hlt-n
         ports:
         - containerPort: 5000
         env:
