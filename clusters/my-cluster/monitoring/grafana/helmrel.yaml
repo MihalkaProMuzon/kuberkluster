@@ -24,6 +24,9 @@ spec:
     nodeSelector:
       storage: "yes"
 
+    service:
+      port: 443
+
     # smtp:
 
 
