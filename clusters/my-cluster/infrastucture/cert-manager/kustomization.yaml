@@ -4,7 +4,7 @@ resources:
 - https://github.com/cert-manager/cert-manager/releases/download/v1.15.3/cert-manager.yaml
 
 - clusterissuer.yaml
-- komplikter-tls.yaml
+- komplikter-tls-stage.yaml
 
 - clusterissuer-prod.yaml
 # - komplikter-tls-prod.yaml
