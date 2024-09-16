@@ -33,6 +33,9 @@ spec:
     adminUser: admin
     adminPassword: 8iobO05xZHme40fnusUIWbhc1IlADaUwF83WH3XL
 
+    nodeSelector:
+      storage: "yes"
+
     # smtp:
 
 
