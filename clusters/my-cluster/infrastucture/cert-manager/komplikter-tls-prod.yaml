@@ -7,14 +7,6 @@ spec:
   # Secret names are always required.
   secretName: tlss-prod-secret
 
-  # keystores allows adding additional output formats. This is an example for reference only.
-  keystores:
-    jks:
-      create: true
-      passwordSecretRef: # Password used to encrypt the keystore
-        key: password-key
-        name: jks-password-secret
-
   duration: 2160h # 90d
   renewBefore: 360h # 15d
 
@@ -27,6 +19,7 @@ spec:
     - komplikter.servehttp.com
     - komplikter-sub1.servehttp.com
     - komplikter-sub2.servehttp.com
+    - komplikter-sub3.servehttp.com
 
   issuerRef:
     name: cissuer-letsencrypt-prod
