@@ -4,7 +4,7 @@ metadata:
   name: loki-stack
   namespace: flux-system
 spec:
-  interval: 0m30s
+  interval: 1m0s
   path: ./clusters/my-cluster/monitoring/loki-stack
   prune: true
   sourceRef:

@@ -1,0 +1,41 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: grafana
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: grafana
+      sourceRef:
+        kind: HelmRepository
+        name: grafana-rep
+        namespace: monitoring
+      interval: 1m
+  values:
+    ingress:
+      enabled: true
+      ingressClassName: nginx
+      path: /
+      pathType: Prefix
+      hosts:
+        - komplikter-sub3.servehttp.com      
+      tls: 
+        - secretName: tlss-prod-secret
+          hosts:
+            komplikter-sub3.servehttp.com
+
+    persistence:
+      enabled: true
+      storageClassName: minidata
+      size: 2Gi
+
+    adminUser: admin
+    adminPassword: 8iobO05xZHme40fnusUIWbhc1IlADaUwF83WH3XL
+
+    # smtp:
+
+
+    ## Override the deployment namespace
+    ##
+    # namespaceOverride: ""

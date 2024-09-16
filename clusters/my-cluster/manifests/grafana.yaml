@@ -1,11 +1,11 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: exapp
+  name: grafana
   namespace: flux-system
 spec:
-  interval: 1m30s
-  path: ./clusters/my-cluster/apps/promoexapp
+  interval: 1m00s
+  path: ./clusters/my-cluster/monitoring/grafana
   prune: true
   sourceRef:
     kind: GitRepository
