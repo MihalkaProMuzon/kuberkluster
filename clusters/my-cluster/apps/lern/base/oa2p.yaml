@@ -33,7 +33,10 @@ spec:
         - name: OAUTH2_PROXY_CLIENT_ID
           value: lernapp
         - name: OAUTH2_PROXY_CLIENT_SECRET
-          value: pII9sowUFX9ka0jPsm2gTHtsGtl2tJxw
+          valueFrom:
+              secretKeyRef:
+                name: lernapp-secret
+                key: lernapp-client-secret
         - name: OAUTH2_PROXY_COOKIE_SECRET
           value: S2JQRWJVVytudDJoTytmSjh5aWJOcEJaRXY2MS9ZZXM=
         image: quay.io/oauth2-proxy/oauth2-proxy:latest
