@@ -51,6 +51,13 @@ spec:
           maxLines: 1000
       image:
         tag: 10.3.3
+      persistence:
+        type: pvc
+        enabled: true
+        storageClassName: minidata
+        accessModes:
+          - ReadWriteOnce
+        size: 1Gi
 
     prometheus:
       enabled: true
