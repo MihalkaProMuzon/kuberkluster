@@ -12,13 +12,8 @@ spec:
         name: grafana-rep
         namespace: monitoring
       interval: 1m
-
-  valuesFrom:
-  - kind: Secret
-    name: monitoring-secret
-
+      
   values:
-
     loki:
       enabled: true
       isDefault: true
