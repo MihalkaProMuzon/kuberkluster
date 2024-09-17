@@ -32,12 +32,12 @@ spec:
           - name: GRAFANA_USER
             valueFrom:
               secretKeyRef:
-                name: flask-secret
+                name: monitoring-secret
                 key: grafana-user
           - name: GRAFANA_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: flask-secret
+                name: monitoring-secret
                 key: grafana-password
 
           - name: APP_SECRET_KEY
