@@ -1,8 +1,3 @@
-{{- $grafanaUser := (lookup "v1" "Secret" .Release.Namespace "secretsconf").data.grafana-user | base64decode | quote }}
-{{- $grafanaPassword := (lookup "v1" "Secret" .Release.Namespace "secretsconf").data.grafana-password | base64decode | quote }}
-
-
-
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
@@ -45,9 +40,9 @@ spec:
         clients:
           - url: http://{{ .Release.Name }}:3100/loki/api/v1/push
           
-    grafana:      
-      adminUser: {{ $grafanaUser }}
-      adminPassword: {{ $grafanaPassword }}
+    grafana:
+      adminUser: {{ (lookup "v1" "Secret" .Release.Namespace "secretsconf").data.grafana-user | base64decode | quote }}
+      adminPassword: {{ (lookup "v1" "Secret" .Release.Namespace "secretsconf").data.grafana-password | base64decode | quote }}
       enabled: true
       sidecar:
         datasources:
