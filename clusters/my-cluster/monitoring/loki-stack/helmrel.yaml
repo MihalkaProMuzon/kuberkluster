@@ -12,6 +12,10 @@ spec:
         name: grafana-rep
         namespace: monitoring
       interval: 1m
+  valuesFrom:
+  - kind: ConfigMap
+    name: secrets-conf
+    
   values:
 
     loki:
@@ -41,8 +45,6 @@ spec:
           - url: http://{{ .Release.Name }}:3100/loki/api/v1/push
           
     grafana:
-      adminUser: {{ (lookup "v1" "Secret" .Release.Namespace "monitoring-secret").data.grafana-user | b64dec }}
-      adminPassword: {{ (lookup "v1" "Secret" .Release.Namespace "monitoring-secret").data.grafana-password | b64dec }}
       enabled: true
       sidecar:
         datasources:
