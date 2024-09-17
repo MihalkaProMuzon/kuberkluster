@@ -42,7 +42,7 @@ spec:
           
     grafana:
       adminUser: admin
-      adminPassword: 123
+      adminPassword: strongPassword
       enabled: true
       sidecar:
         datasources:
