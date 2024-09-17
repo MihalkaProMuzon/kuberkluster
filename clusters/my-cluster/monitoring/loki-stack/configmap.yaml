@@ -3,7 +3,6 @@ kind: ConfigMap
 metadata:
   name: secretsconf
 data:
-  values:
-    grafana:
-      adminUser: monitoring-secret.grafana-user
-      adminPassword: monitoring-secret.grafana-password
+  grafana:
+    adminUser: monitoring-secret.grafana-user
+    adminPassword: monitoring-secret.grafana-password
