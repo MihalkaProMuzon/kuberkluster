@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - Namespace.yaml
   - helmrep.yaml
-  # - helmrel.yaml
+  - helmrel.yaml
   - ingress.yaml
   # - svc.yaml
 
