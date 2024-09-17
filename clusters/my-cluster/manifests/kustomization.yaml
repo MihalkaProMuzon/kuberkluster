@@ -15,9 +15,7 @@ resources:
   - oa2proxy.yaml
 
   - headlamp.yaml
-  # - prometeus.yaml
   - loki-stack.yaml
-  - grafana.yaml
 
   # - exapp.yaml
   - lernapp.yaml
