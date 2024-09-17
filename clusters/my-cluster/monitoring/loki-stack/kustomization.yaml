@@ -5,6 +5,7 @@ resources:
   - helmrep.yaml
   - helmrel.yaml
   - ingress.yaml
+  - configmap.yaml
   # - svc.yaml
 
 namespace: monitoring
