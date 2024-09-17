@@ -41,8 +41,8 @@ spec:
           - url: http://{{ .Release.Name }}:3100/loki/api/v1/push
           
     grafana:
-      adminUser: {{ .Values.configMap.secretsconf.grafana-user }}
-      adminPassword: {{ .Values.configMap.secretsconf.grafana-password }}
+      adminUser: {{- $value := (lookup "v1" "Secret" .Release.Namespace "secretsconf").data.grafana-user | base64decode -}}
+      adminPassword: {{- $value := (lookup "v1" "Secret" .Release.Namespace "secretsconf").data.grafana-password | base64decode -}}
       enabled: true
       sidecar:
         datasources:
