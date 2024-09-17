@@ -14,7 +14,7 @@ spec:
       interval: 1m
   valuesFrom:
   - kind: ConfigMap
-    name: secrets-conf
+    name: secretsconf
     
   values:
 
