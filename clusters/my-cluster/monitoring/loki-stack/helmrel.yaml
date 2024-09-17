@@ -46,6 +46,8 @@ spec:
           - url: http://{{ .Release.Name }}:3100/loki/api/v1/push
           
     grafana:
+      adminUser: admin
+      adminPassword: 123
       enabled: true
       sidecar:
         datasources:
