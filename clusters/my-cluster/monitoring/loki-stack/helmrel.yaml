@@ -66,9 +66,9 @@ spec:
           - ReadWriteOnce
         size: 1Gi
 
-      # env: 
-      #   - name: GF_AUTH_GENERIC_OAUTH_ENABLED
-      #     value: true
+      env: 
+        - name: GF_AUTH_GENERIC_OAUTH_ENABLED
+          value: true
       #   - name: GF_AUTH_GENERIC_OAUTH_NAME
       #     value: Keycloak-OAuth
       #   - name: GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP
