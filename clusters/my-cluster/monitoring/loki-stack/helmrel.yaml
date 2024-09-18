@@ -66,40 +66,40 @@ spec:
           - ReadWriteOnce
         size: 1Gi
 
-      env: 
-        - name: GF_AUTH_GENERIC_OAUTH_ENABLED
-          value: true
-        - name: GF_AUTH_GENERIC_OAUTH_NAME
-          value: Keycloak-OAuth
-        - name: GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP
-          value: true
-        - name: GF_AUTH_GENERIC_OAUTH_CLIENT_ID
-          value: grafana
-        - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
-          value: dMcZLgZeEYMww7vXbUkBNB3KatJKIVc1
-        - name: GF_AUTH_GENERIC_OAUTH_SCOPES
-          value: "openid email profile offline_access roles"
+      # env: 
+      #   - name: GF_AUTH_GENERIC_OAUTH_ENABLED
+      #     value: true
+      #   - name: GF_AUTH_GENERIC_OAUTH_NAME
+      #     value: Keycloak-OAuth
+      #   - name: GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP
+      #     value: true
+      #   - name: GF_AUTH_GENERIC_OAUTH_CLIENT_ID
+      #     value: grafana
+      #   - name: GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET
+      #     value: dMcZLgZeEYMww7vXbUkBNB3KatJKIVc1
+      #   - name: GF_AUTH_GENERIC_OAUTH_SCOPES
+      #     value: "openid email profile offline_access roles"
 
-        - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_PATH
-          value: email
-        - name: GF_AUTH_GENERIC_OAUTH_LOGIN_ATTRIBUTE_PATH
-          value: username
-        - name: GF_AUTH_GENERIC_OAUTH_NAME_ATTRIBUTE_PATH
-          value: full_name
+      #   - name: GF_AUTH_GENERIC_OAUTH_EMAIL_ATTRIBUTE_PATH
+      #     value: email
+      #   - name: GF_AUTH_GENERIC_OAUTH_LOGIN_ATTRIBUTE_PATH
+      #     value: username
+      #   - name: GF_AUTH_GENERIC_OAUTH_NAME_ATTRIBUTE_PATH
+      #     value: full_name
 
-        - name: GF_AUTH_GENERIC_OAUTH_AUTH_URL
-          value: https://komplikter-sub1.servehttp.com/realms/kuberkluster/protocol/openid-connect/auth
-        - name: GF_AUTH_GENERIC_OAUTH_TOKEN_URL
-          value: https://komplikter-sub1.servehttp.com/realms/kuberkluster/protocol/openid-connect/token
-        - name: GF_AUTH_GENERIC_OAUTH_API_URL
-          value: https://komplikter-sub1.servehttp.com/realms/kuberkluster/protocol/openid-connect/userinfo
+      #   - name: GF_AUTH_GENERIC_OAUTH_AUTH_URL
+      #     value: https://komplikter-sub1.servehttp.com/realms/kuberkluster/protocol/openid-connect/auth
+      #   - name: GF_AUTH_GENERIC_OAUTH_TOKEN_URL
+      #     value: https://komplikter-sub1.servehttp.com/realms/kuberkluster/protocol/openid-connect/token
+      #   - name: GF_AUTH_GENERIC_OAUTH_API_URL
+      #     value: https://komplikter-sub1.servehttp.com/realms/kuberkluster/protocol/openid-connect/userinfo
 
-        - name: GF_AUTH_GENERIC_OAUTH_ROLE_ATTRIBUTE_PATH
-          value: "contains(roles[*], 'admin') && 'Admin' || contains(roles[*], 'editor') && 'Editor' || 'Viewer'"
-        - name: GF_AUTH_GENERIC_OAUTH_ALLOW_ASSING_GRAFANA_ADMIN
-          value: true
-        - name: GF_AUTH_GENERIC_OAUTH_USE_REFRESH_TOKEN
-          value: true
+      #   - name: GF_AUTH_GENERIC_OAUTH_ROLE_ATTRIBUTE_PATH
+      #     value: "contains(roles[*], 'admin') && 'Admin' || contains(roles[*], 'editor') && 'Editor' || 'Viewer'"
+      #   - name: GF_AUTH_GENERIC_OAUTH_ALLOW_ASSING_GRAFANA_ADMIN
+      #     value: true
+      #   - name: GF_AUTH_GENERIC_OAUTH_USE_REFRESH_TOKEN
+      #     value: true
 
         # [auth.generic_oauth]
         # enabled = true
