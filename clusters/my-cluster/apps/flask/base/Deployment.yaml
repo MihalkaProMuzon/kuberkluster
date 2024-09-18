@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: flaskapp-container
-        image: mihalkapromzona/flaga:r1.3
+        image: mihalkapromzona/flaga:r1.4
         ports:
         - containerPort: 5000
         env:
