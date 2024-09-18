@@ -43,6 +43,12 @@ spec:
     grafana:
       # adminUser: admin
       # adminPassword: strongPassword
+      # Use an existing secret for the admin user.
+      # admin:
+        ## Name of the secret. Can be templated.
+        # existingSecret: ""
+        # userKey: admin-user
+        # passwordKey: admin-password
       enabled: true
       sidecar:
         datasources:
