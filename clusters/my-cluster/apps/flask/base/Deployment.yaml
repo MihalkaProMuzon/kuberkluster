@@ -57,7 +57,7 @@ spec:
                 key: kk-client-secret-key
 
           - name: HEADLAMP_URL
-            value: "http://komplikter.ydns.eu"
+            value: "https://komplikter.ydns.eu"
           - name: HEADLAMP_TOKEN
             valueFrom:
               secretKeyRef:
