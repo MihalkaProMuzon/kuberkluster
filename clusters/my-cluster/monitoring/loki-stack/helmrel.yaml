@@ -67,6 +67,9 @@ spec:
         size: 1Gi
 
       env: 
+        GF_SECURITY_ADMIN_PASSWORD__FILE: "123"
+        GF_AUTH_GENERIC_OAUTH_ENABLED: true
+
         - name: GF_AUTH_GENERIC_OAUTH_ENABLED
           value: true
         - name: GF_AUTH_GENERIC_OAUTH_NAME
