@@ -67,6 +67,11 @@ spec:
         size: 1Gi
 
       env: 
+        - name: GF_SECURITY_DISABLE_INITIAL_ADMIN_CREATION
+          value: true
+        - name: GF_SECURITY_ADMIN_PASSWORD__FILE
+          value: "/run/secrets/some_pwd"
+          
         - name: GF_AUTH_GENERIC_OAUTH_ENABLED
           value: true
         - name: GF_AUTH_GENERIC_OAUTH_NAME
@@ -100,11 +105,6 @@ spec:
           value: true
         - name: GF_AUTH_GENERIC_OAUTH_USE_REFRESH_TOKEN
           value: true
-
-        - name: GF_SECURITY_DISABLE_INITIAL_ADMIN_CREATION
-          value: true
-        - name: GF_SECURITY_ADMIN_PASSWORD__FILE
-          value: "/run/secrets/some_pwd"
 
         # [auth.generic_oauth]
         # enabled = true
