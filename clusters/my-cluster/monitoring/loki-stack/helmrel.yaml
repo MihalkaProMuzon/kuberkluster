@@ -65,7 +65,10 @@ spec:
         accessModes:
           - ReadWriteOnce
         size: 1Gi
-
+      
+      grafana.ini:
+        server:
+          root_url: "https://komplikter-sub3.servehttp.com"
       env: 
         GF_SECURITY_DISABLE_INITIAL_ADMIN_CREATION: true
         GF_AUTH_GENERIC_OAUTH_ENABLED: true
