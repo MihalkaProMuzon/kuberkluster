@@ -104,7 +104,7 @@ spec:
         - name: GF_SECURITY_DISABLE_INITIAL_ADMIN_CREATION
           value: true
         - name: GF_SECURITY_ADMIN_PASSWORD__FILE
-          value: ""
+          value: "123"
 
         # [auth.generic_oauth]
         # enabled = true
