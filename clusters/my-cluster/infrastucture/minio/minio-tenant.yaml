@@ -33,7 +33,7 @@ spec:
           size: 1Gi
           storageClassName: minidata
       metrics:
-        enabled: true
+        enabled: false
       buckets:
         - name: loki_chunks
         - name: loki_ruler
