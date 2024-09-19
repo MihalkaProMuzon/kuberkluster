@@ -15,7 +15,8 @@ spec:
       interval: 1m
   values:
 
-
+    spec:
+      prometheusOperator: false
 
     tenant:
       name: mtenant1
@@ -35,7 +36,7 @@ spec:
       metrics:
         enabled: false
       prometheusOperator: false
-      
+
       buckets:
         - name: loki_chunks
         - name: loki_ruler
