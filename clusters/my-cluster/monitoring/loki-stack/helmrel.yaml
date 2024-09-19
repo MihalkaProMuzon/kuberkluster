@@ -32,11 +32,6 @@ spec:
         jsonData: "{}"
         uid: ""
 
-      gateway:
-        ingress:
-          enabled: true
-          ingressClassName: "nginx"
-
 
     promtail:
       enabled: true
