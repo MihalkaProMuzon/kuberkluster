@@ -32,32 +32,11 @@ spec:
         jsonData: "{}"
         uid: ""
 
-      minio:
-        enabled: true
-        replicas: 1
-        # Minio requires 2 to 16 drives for erasure code (drivesPerNode * replicas)
-        # https://docs.min.io/docs/minio-erasure-code-quickstart-guide
-        # Since we only have 1 replica, that means 2 drives must be used.
-        drivesPerNode: 2
-        rootUser: enterprise-logs
-        rootPassword: supersecret
-        buckets:
-          - name: chunks
-            policy: none
-            purge: true
-          - name: ruler
-            policy: none
-            purge: false
-          - name: admin
-            policy: none
-            purge: false
-        persistence:
-          size: 5Gi
-          annotations: {}
-        resources:
-          requests:
-            cpu: 100m
-            memory: 128Mi
+      gateway:
+        ingress:
+          enabled: true
+          ingressClassName: "nginx"
+
 
     promtail:
       enabled: true
