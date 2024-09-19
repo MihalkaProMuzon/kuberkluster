@@ -16,8 +16,8 @@ spec:
   values:
     tenant:
       name: mtenant1
+      image: RELEASE.2024-09-13T20-26-02Z
       configSecret:
-        name: myminio-env-configuration
         accessKey: minio
         secretKey: minio123
       pools:
