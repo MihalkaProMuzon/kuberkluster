@@ -19,7 +19,10 @@ spec:
 
     tenant:
       name: mtenant1
-      image: RELEASE.2024-09-13T20-26-02Z
+      image: 
+        repository: quay.io/minio/minio
+        tag: RELEASE.2024-09-13T20-26-02Z
+        pullPolicy: IfNotPresent
       configSecret:
         accessKey: minio
         secretKey: minio123
