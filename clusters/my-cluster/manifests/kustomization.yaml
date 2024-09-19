@@ -16,6 +16,7 @@ resources:
 
   - headlamp.yaml
   - loki-stack.yaml
+  - minio.yaml
 
   # - exapp.yaml
   - lernapp.yaml
