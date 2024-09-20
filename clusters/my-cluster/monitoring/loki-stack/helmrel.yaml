@@ -121,6 +121,10 @@ spec:
       envFromSecrets:
         - name: monitoring-secret
 
+      nodeSelector:
+        storage: "yes"
+
+
     prometheus:
       enabled: true
       isDefault: false
