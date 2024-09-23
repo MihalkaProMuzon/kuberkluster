@@ -39,11 +39,11 @@ spec:
           httpGet:
             path: /minio/health/ready
             port: 9000
-          initialDelaySeconds: 120
+          initialDelaySeconds: 40
           periodSeconds: 20
         livenessProbe:
           httpGet:
             path: /minio/health/live
             port: 9000
-          initialDelaySeconds: 120
+          initialDelaySeconds: 40
           periodSeconds: 20

@@ -6,9 +6,8 @@ spec:
   type: LoadBalancer
   ports:
     - name: http
-      port: 9000
+      port: 80
       targetPort: 9000
       protocol: TCP
   selector:
-    # Looks for labels `app:minio` in the namespace and applies the spec
     app: minio
