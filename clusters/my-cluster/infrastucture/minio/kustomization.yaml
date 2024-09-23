@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - github.com/minio/operator?ref=v6.0.3
 
-patches:
+patchesStrategicMerge:
   - deployment_patch.yaml
 
 
