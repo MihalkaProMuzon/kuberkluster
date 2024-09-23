@@ -32,7 +32,21 @@ spec:
         jsonData: "{}"
         uid: ""
 
-      # loki:
+      
+
+      loki:
+        storage:
+          bucketNames: 
+            chunks: kuberkluster-loki-chunks
+            ruler: kuberkluster-loki-ruler
+            admin: kuberkluster-loki-admin
+          type: s3
+          s3:
+            endpoint: minio-svc.minio.svc.cluster.local
+            secretAccessKey: ominubyv
+            accessKeyId: kuberkluster-loki
+
+
       #   loki:
       #     commonConfig:
       #       replication_factor: 3
