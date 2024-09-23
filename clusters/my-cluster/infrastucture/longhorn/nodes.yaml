@@ -27,3 +27,4 @@ metadata:
   labels:
     node.longhorn.io/create-default-disk: 'config'
     storage: 'yes'
+    cpu: 'old'

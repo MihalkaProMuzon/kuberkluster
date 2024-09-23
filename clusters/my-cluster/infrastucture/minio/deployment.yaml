@@ -47,3 +47,13 @@ spec:
             port: 9000
           initialDelaySeconds: 120
           periodSeconds: 20
+          
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: cpu
+                operator: NotIn
+                values:
+                - old
