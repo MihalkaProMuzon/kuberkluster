@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - helmrep.yaml
-  - minio-operator.yaml
+  #- minio-operator.yaml
   # - minio-tenant.yaml
 
   # - CRB.yaml
