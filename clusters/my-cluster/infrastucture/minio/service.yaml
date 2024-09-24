@@ -3,10 +3,13 @@ kind: Service
 metadata:
   name: minio-svc
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - port: 80
       targetPort: 9001
+      protocol: TCP
+    - port: 9000
+      targetPort: 9000
       protocol: TCP
   selector:
     app: minio
