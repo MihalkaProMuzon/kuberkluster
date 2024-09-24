@@ -30,7 +30,7 @@ spec:
         args:
         - server
         - /data
-        - --console-address=":43565"
+        - --console-address="127.0.0.1:43565"
         env:
         - name: MINIO_ROOT_USER
           value: "minio"
