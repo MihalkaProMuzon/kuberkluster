@@ -32,31 +32,27 @@ spec:
         jsonData: "{}"
         uid: ""
 
-      
-
       loki:
-        
-        loki:
-          storage:
-            bucketNames: 
-              chunks: kuberkluster-loki-chunks
-              ruler: kuberkluster-loki-ruler
-              admin: kuberkluster-loki-admin
-            type: s3
-            s3:
-              endpoint: minio-svc.minio.svc.cluster.local:9000
-              secretAccessKey: Hn3mhFXpvcXzhIELkx0j3OMeDkzixdOmXFz7gWsR
-              accessKeyId: VP2YX1j3Ci8cwXlLnccW
+        storage:
+          bucketNames: 
+            chunks: kuberkluster-loki-chunks
+            ruler: kuberkluster-loki-ruler
+            admin: kuberkluster-loki-admin
+          type: s3
+          s3:
+            endpoint: minio-svc.minio.svc.cluster.local:9000
+            secretAccessKey: Hn3mhFXpvcXzhIELkx0j3OMeDkzixdOmXFz7gWsR
+            accessKeyId: VP2YX1j3Ci8cwXlLnccW
 
-          schema_config:
-            configs:
-              - from: 2001-01-01
-                store: tsdb 
-                object_store: s3
-                schema: v13
-                index:
-                  prefix: index_
-                  period: 4h
+        schema_config:
+          configs:
+            - from: 2001-01-01
+              store: tsdb 
+              object_store: s3
+              schema: v13
+              index:
+                prefix: index_
+                period: 4h
 
 
 
