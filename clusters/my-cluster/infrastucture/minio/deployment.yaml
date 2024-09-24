@@ -30,14 +30,12 @@ spec:
         args:
         - server
         - /data
-        - --console-address=":9001"
+        - --console-address="9001"
         env:
         - name: MINIO_ROOT_USER
           value: "minio"
         - name: MINIO_ROOT_PASSWORD
           value: "minio123"
-        - name: CONSOLE_ADDRESS
-          value: ":9001"
 
         ports:
         - containerPort: 9000
