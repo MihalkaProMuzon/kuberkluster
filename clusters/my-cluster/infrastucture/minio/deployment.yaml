@@ -61,3 +61,7 @@ spec:
                 operator: NotIn
                 values:
                 - old
+              - key: storage
+                operator: In
+                values:
+                - yes
