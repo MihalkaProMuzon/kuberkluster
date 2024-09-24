@@ -28,7 +28,9 @@ spec:
           mountPath: /data
         image: minio/minio
         args:
-        - minio server /data --console-address ":9001"
+        - server
+        - /data
+        - ---console-address ":9001"
         env:
         - name: MINIO_ROOT_USER
           value: "minio"
