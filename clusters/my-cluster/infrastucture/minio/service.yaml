@@ -6,9 +6,11 @@ spec:
   type: LoadBalancer
   ports:
     - port: 80
+      name: http-console
       targetPort: 9001
       protocol: TCP
     - port: 9000
+      name: storage
       targetPort: 9000
       protocol: TCP
   selector:
