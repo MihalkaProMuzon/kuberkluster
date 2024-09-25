@@ -15,6 +15,8 @@ spec:
       
   values:
     loki:
+      image:
+        tag: 3.1.0
       enabled: true
       isDefault: true
       url: http://{{(include "loki.serviceName" .)}}:{{ .Values.loki.service.port }}
