@@ -39,8 +39,8 @@ spec:
             s3: http://VP2YX1j3Ci8cwXlLnccW:Hn3mhFXpvcXzhIELkx0j3OMeDkzixdOmXFz7gWsR@192.168.0.243:9000
             s3forcepathstyle: true
           tsdb_shipper:
-            active_index_directory: /loki/index
-            cache_location: /loki/index_cache
+            active_index_directory: /data/loki/index
+            cache_location: /data/loki/index_cache
             cache_ttl: 24h 
 
         schema_config:
