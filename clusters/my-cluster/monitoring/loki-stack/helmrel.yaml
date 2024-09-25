@@ -32,58 +32,28 @@ spec:
         jsonData: "{}"
         uid: ""
 
-      loki:
-        storage:
-          bucketNames: 
-            chunks: kuberkluster-loki-chunks
-            ruler: kuberkluster-loki-ruler
-            admin: kuberkluster-loki-admin
-          type: s3
-          s3:
-            endpoint: minio-svc.minio.svc.cluster.local:9000
-            secretAccessKey: Hn3mhFXpvcXzhIELkx0j3OMeDkzixdOmXFz7gWsR
-            accessKeyId: VP2YX1j3Ci8cwXlLnccW
+      # deploymentMode: SingleBinary
+      config:
+        commonConfig:
+          replication_factor: 1
+        storage_config:
+          aws:
+            s3: http://VP2YX1j3Ci8cwXlLnccW:Hn3mhFXpvcXzhIELkx0j3OMeDkzixdOmXFz7gWsR@192.168.0.243:9000
+            s3forcepathstyle: true
+          tsdb_shipper:
+            active_index_directory: /loki/index
+            cache_location: /loki/index_cache
+            cache_ttl: 24h 
 
         schema_config:
           configs:
-            - from: 2001-01-01
-              store: tsdb 
+            - from: 2020-07-01
+              store: tsdb
               object_store: s3
               schema: v13
               index:
                 prefix: index_
                 period: 4h
-
-
-
-      #   loki:
-      #     commonConfig:
-      #       replication_factor: 3
-      #     schemaConfig:
-      #       configs:
-      #       - from: "2024-01-01"
-      #         store: tsdb
-      #         index:
-      #           prefix: loki_index_
-      #           period: 24h
-      #         object_store: s3
-      #         schema: v13
-      #     storage:
-      #       type: 's3'
-      #       bucketNames:
-      #         chunks: loki-chunks
-      #         ruler: loki-ruler
-      #         admin: loki-admin
-      #       s3:
-      #         endpoint: foo.aws.com
-      #         region: <AWS region>
-      #         secretAccessKey: supersecret
-      #         accessKeyId: secret
-      #         s3ForcePathStyle: false
-      #         insecure: false
-      #   singleBinary:
-      #     replicas: 2
-
 
     promtail:
       enabled: true
@@ -94,14 +64,6 @@ spec:
           - url: http://{{ .Release.Name }}:3100/loki/api/v1/push
           
     grafana:
-      # adminUser: admin
-      # adminPassword: strongPassword
-      # Use an existing secret for the admin user.
-      # admin:
-        ## Name of the secret. Can be templated.
-        # existingSecret: ""
-        # userKey: admin-user
-        # passwordKey: admin-password
       enabled: true
       sidecar:
         datasources:
