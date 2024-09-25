@@ -51,7 +51,7 @@ spec:
               schema: v13
               index:
                 prefix: index_
-                period: 4h
+                period: 24h
 
     promtail:
       enabled: true
