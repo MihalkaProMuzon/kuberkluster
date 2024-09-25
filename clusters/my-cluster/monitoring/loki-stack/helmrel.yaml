@@ -34,8 +34,6 @@ spec:
 
       # deploymentMode: SingleBinary
       config:
-        commonConfig:
-          replication_factor: 1
         storage_config:
           aws:
             s3: http://VP2YX1j3Ci8cwXlLnccW:Hn3mhFXpvcXzhIELkx0j3OMeDkzixdOmXFz7gWsR@192.168.0.243:9000
