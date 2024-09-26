@@ -34,11 +34,22 @@ spec:
         jsonData: "{}"
         uid: ""
 
+      ingester:
+        chunk_block_size: 262144
+        chunk_idle_period: 3m
+        chunk_retain_period: 1m
+        lifecycler:
+          ring:
+            replication_factor: 1
+        max_transfer_retries: 0
+        wal:
+          dir: /data/loki/wal
+
       # deploymentMode: SimpleScalable
       # common_config:
       #   replication_factor: 3
 
-      fullnameOverride: loki-vf
+      fullnameOverride: loki-vg
 
       # storage:
       #   # Loki requires a bucket for chunks and the ruler. GEL requires a third bucket for the admin API.
