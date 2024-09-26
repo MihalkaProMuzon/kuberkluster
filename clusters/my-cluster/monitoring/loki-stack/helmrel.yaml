@@ -34,6 +34,9 @@ spec:
         jsonData: "{}"
         uid: ""
 
+      compactor:
+        shared_store: filesystem
+        working_directory: /data/loki/boltdb-shipper-compactor
       ingester:
         chunk_block_size: 262144
         chunk_idle_period: 3m
@@ -49,7 +52,7 @@ spec:
       # common_config:
       #   replication_factor: 3
 
-      fullnameOverride: loki-vg
+      fullnameOverride: loki-vh
 
       # storage:
       #   # Loki requires a bucket for chunks and the ruler. GEL requires a third bucket for the admin API.
