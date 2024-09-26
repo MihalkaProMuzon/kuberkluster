@@ -38,6 +38,8 @@ spec:
       # common_config:
       #   replication_factor: 3
 
+      fullnameOverride: loki-va
+
       storage:
         # Loki requires a bucket for chunks and the ruler. GEL requires a third bucket for the admin API.
         # Please provide these values if you are using object storage.
