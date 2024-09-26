@@ -23,7 +23,7 @@ spec:
         logLevel: info
         serverPort: 3101
         clients:
-          - url: http://loki-write:3100/loki/api/v1/push
+          - url: http://loki-gateway/loki/api/v1/push
           
     grafana:
       enabled: true
