@@ -36,6 +36,8 @@ spec:
 
       fullnameOverride: loki-vm
 
+      lokiCanary:
+        enabled: false
 
       loki:
         schemaConfig:
