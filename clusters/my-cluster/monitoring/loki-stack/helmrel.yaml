@@ -38,7 +38,7 @@ spec:
       # common_config:
       #   replication_factor: 3
 
-      fullnameOverride: loki-va
+      fullnameOverride: loki-vb
 
       storage:
         # Loki requires a bucket for chunks and the ruler. GEL requires a third bucket for the admin API.
@@ -61,16 +61,16 @@ spec:
           # -- Check https://grafana.com/docs/loki/latest/configure/#s3_storage_config for more info on how to provide a backoff_config
           # backoff_config: {}
           # disable_dualstack: false
-
-      schemaConfig: 
-        configs:
-          - from: "2021-05-12"
-            store: tsdb
-            object_store: s3
-            schema: v11
-            index:
-              prefix: index_
-              period: 24h
+      config:
+        schemaConfig: 
+          configs:
+            - from: "2021-05-12"
+              store: tsdb
+              object_store: s3
+              schema: v11
+              index:
+                prefix: index_
+                period: 24h
 
       # config:
       #   storage_config:
