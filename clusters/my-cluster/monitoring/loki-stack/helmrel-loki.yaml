@@ -18,6 +18,8 @@ spec:
     fullnameOverride: loki-va
     lokiCanary:
       enabled: false
+    test:
+      enabled: false
 
     loki:
       schemaConfig:
