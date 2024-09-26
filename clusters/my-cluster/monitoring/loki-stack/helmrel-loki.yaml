@@ -20,6 +20,9 @@ spec:
       enabled: false
 
     loki:
+      commonConfig:
+        replication_factor: 1
+
       auth_enabled: false
       schemaConfig:
         configs:
