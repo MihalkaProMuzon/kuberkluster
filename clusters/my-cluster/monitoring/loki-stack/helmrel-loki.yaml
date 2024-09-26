@@ -61,10 +61,37 @@ spec:
 
     backend:
       replicas: 1
+      nodeSelector: 
+        storage: "yes"
+      persistence:
+        enabled: true
+        storageSize: 200Mi
+        storageClass: minidata
+
+    chunksCache:
+      nodeSelector: 
+        storage: "yes"
+      persistence:
+        enabled: true
+        storageSize: 200Mi
+        storageClass: minidata
+
     read:
       replicas: 1
+      nodeSelector: 
+        storage: "yes"
+      persistence:
+        enabled: true
+        storageSize: 200Mi
+        storageClass: minidata
     write:
       replicas: 1
+      nodeSelector: 
+        storage: "yes"
+      persistence:
+        enabled: true
+        storageSize: 200Mi
+        storageClass: minidata
 
     # Disable minio storage
     minio:
