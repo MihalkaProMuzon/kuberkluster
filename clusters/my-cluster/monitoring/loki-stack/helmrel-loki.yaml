@@ -59,38 +59,32 @@ spec:
 
     deploymentMode: SimpleScalable
 
-    backend:
+    backend:  
       replicas: 1
       nodeSelector: 
         storage: "yes"
       persistence:
-        enabled: true
-        storageSize: 200Mi
+        size: 200Mi
         storageClass: minidata
-
     chunksCache:
+      enabled: false
       nodeSelector: 
         storage: "yes"
       persistence:
         enabled: true
         storageSize: 200Mi
         storageClass: minidata
-
     read:
       replicas: 1
-      nodeSelector: 
-        storage: "yes"
-      persistence:
-        enabled: true
-        storageSize: 200Mi
-        storageClass: minidata
+      size: 200Mi
+      storageClass: minidata
     write:
       replicas: 1
       nodeSelector: 
         storage: "yes"
       persistence:
+        size: 200Mi
         enabled: true
-        storageSize: 200Mi
         storageClass: minidata
 
     # Disable minio storage
