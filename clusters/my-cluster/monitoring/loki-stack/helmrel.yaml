@@ -38,7 +38,7 @@ spec:
       # common_config:
       #   replication_factor: 3
 
-      fullnameOverride: loki-vc
+      fullnameOverride: loki-vE
 
       storage:
         # Loki requires a bucket for chunks and the ruler. GEL requires a third bucket for the admin API.
@@ -49,28 +49,31 @@ spec:
           admin: ls-admin
         type: s3
         s3:
-          s3: http://VP2YX1j3Ci8cwXlLnccW:Hn3mhFXpvcXzhIELkx0j3OMeDkzixdOmXFz7gWsR@192.168.0.243:9000/loki-stack-full
-          # endpoint: null
+          # s3: http://VP2YX1j3Ci8cwXlLnccW:Hn3mhFXpvcXzhIELkx0j3OMeDkzixdOmXFz7gWsR@192.168.0.243:9000/loki-stack-full
+          endpoint: http://192.168.0.243:9000
           region: Skibidi
-          # secretAccessKey: null
-          # accessKeyId: null
+          secretAccessKey: Hn3mhFXpvcXzhIELkx0j3OMeDkzixdOmXFz7gWsR
+          accessKeyId: VP2YX1j3Ci8cwXlLnccW
           # signatureVersion: null
           s3ForcePathStyle: true
-          # insecure: false
+          insecure: false
           # http_config: {}
           # -- Check https://grafana.com/docs/loki/latest/configure/#s3_storage_config for more info on how to provide a backoff_config
-          # backoff_config: {}
+          backoff_config:
+            min_backoff: 100ms
+            max_backoff: 10s
+            max_retries: 5
           # disable_dualstack: false
-      config:
-        schema_config:
-          configs:
-            - from: "2021-05-12"
-              store: tsdb
-              object_store: s3
-              schema: v11
-              index:
-                prefix: index_
-                period: 24h
+
+      schemaСonfig:
+        configs:
+          - from: "2021-05-12"
+            store: tsdb
+            object_store: s3
+            schema: v11
+            index:
+              prefix: index_
+              period: 24h
 
       # config:
       #   storage_config:
