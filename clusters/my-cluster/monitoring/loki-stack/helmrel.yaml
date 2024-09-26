@@ -16,6 +16,8 @@ spec:
   values:
     loki:
       enabled: true
+      image:
+        tag: 3.1.0
       isDefault: true
       url: http://{{(include "loki.serviceName" .)}}:{{ .Values.loki.service.port }}
       readinessProbe:
@@ -32,9 +34,9 @@ spec:
         jsonData: "{}"
         uid: ""
 
-      # deploymentMode: SingleBinary
-      common_config:
-        replication_factor: 5
+      deploymentMode: SimpleScalable
+      # common_config:
+      #   replication_factor: 3
       config:
         storage_config:
           aws:
