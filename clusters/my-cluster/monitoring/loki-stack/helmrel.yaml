@@ -34,7 +34,7 @@ spec:
         jsonData: "{}"
         uid: ""
 
-
+      fullnameOverride: loki-vm
 
 
       loki:
