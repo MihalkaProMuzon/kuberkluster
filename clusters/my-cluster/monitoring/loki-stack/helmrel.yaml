@@ -17,6 +17,12 @@ spec:
     loki:
       enabled: false
 
+    chunksCache:
+      persistence:
+        enabled: true
+        storageSize: 1G
+        storageClass: minidata
+
     promtail:
       enabled: true
       config:
