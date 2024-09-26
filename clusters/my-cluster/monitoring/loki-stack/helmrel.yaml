@@ -38,7 +38,7 @@ spec:
       # common_config:
       #   replication_factor: 3
 
-      fullnameOverride: loki-vb
+      fullnameOverride: loki-vc
 
       storage:
         # Loki requires a bucket for chunks and the ruler. GEL requires a third bucket for the admin API.
@@ -62,7 +62,7 @@ spec:
           # backoff_config: {}
           # disable_dualstack: false
       config:
-        schemaConfig: 
+        schema_config:
           configs:
             - from: "2021-05-12"
               store: tsdb
