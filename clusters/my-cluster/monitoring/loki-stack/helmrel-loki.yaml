@@ -62,24 +62,27 @@ spec:
     deploymentMode: SimpleScalable
 
     backend:  
-      replicas: 1
+      replicas: 2
       nodeSelector: 
         storage: "yes"
       persistence:
         size: 200Mi
         storageClass: minidata
     chunksCache:
-      enabled: true
+      enabled: false
       nodeSelector: 
         storage: "yes"
       persistence:
-        enabled: true
+        enabled: false
         storageSize: 200Mi
         storageClass: minidata
     read:
       replicas: 1
-      size: 200Mi
-      storageClass: minidata
+      persistence:
+        size: 200Mi
+        storageClass: minidata
+      nodeSelector: 
+        storage: "yes"
     write:
       replicas: 1
       nodeSelector: 
