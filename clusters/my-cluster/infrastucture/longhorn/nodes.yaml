@@ -16,15 +16,15 @@ metadata:
     node.longhorn.io/create-default-disk: 'config'
     storage: 'yes'
 
-# ---
-# apiVersion: v1
-# kind: Node
-# metadata:
-#   name: workerlocal2
-#   annotations:
-#     node.longhorn.io/default-node-tags: '["data", "db"]'
-#     node.longhorn.io/default-disks-config: '[{"name":"data","path":"/var/lib/longhorn/","allowScheduling":true,"tags":["dataDisk"]}]'
-#   labels:
-#     node.longhorn.io/create-default-disk: 'config'
-#     storage: 'yes'
-#     cpu: 'old'
+---
+apiVersion: v1
+kind: Node
+metadata:
+  name: workerlocal2
+  annotations:
+    node.longhorn.io/default-node-tags: '["data", "db"]'
+    node.longhorn.io/default-disks-config: '[{"name":"data","path":"/var/lib/longhorn/","allowScheduling":true,"tags":["dataDisk"]}]'
+  labels:
+    node.longhorn.io/create-default-disk: 'config'
+    storage: 'yes'
+    cpu: 'old'
