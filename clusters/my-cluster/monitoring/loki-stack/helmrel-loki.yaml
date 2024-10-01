@@ -38,7 +38,7 @@ spec:
       tracing:
         enabled: true
       querier:
-        max_concurrent: 4
+        max_concurrent: 3
 
       storage:
         type: s3
