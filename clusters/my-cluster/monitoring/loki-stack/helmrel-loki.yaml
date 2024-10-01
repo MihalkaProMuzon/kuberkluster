@@ -51,8 +51,8 @@ spec:
           # s3: s3://access_key:secret_access_key@custom_endpoint/bucket_name
           endpoint: http://minio-svc.minio.svc.cluster.local:9000
           region: Skibidi
-          secretAccessKey: Hn3mhFXpvcXzhIELkx0j3OMeDkzixdOmXFz7gWsR
-          accessKeyId: VP2YX1j3Ci8cwXlLnccW
+          accessKeyId: 5DJz6sM0TmAaRDUdSkVV
+          secretAccessKey: RMykXg6Xjb6elu9IAPpWrArwx2oDaDZ3ILaZrVnR
           signatureVersion: v4
           s3ForcePathStyle: true
           insecure: true
