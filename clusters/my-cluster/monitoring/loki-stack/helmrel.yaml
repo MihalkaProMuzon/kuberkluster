@@ -81,6 +81,9 @@ spec:
       server:
         nodeSelector:
           storage: "yes"
-        storageClass: "minidata"
-        size: 4Gi
+          
+        persistentVolume:
+          storageClass: "minidata"
+          size: 4Gi
+
         retention: "5d"
