@@ -5,9 +5,9 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/auth-url: "https://$host/oauth2/auth"
     nginx.ingress.kubernetes.io/auth-signin: "https://$host/oauth2/start?rd=$escaped_request_uri"
-    nginx.ingress.kubernetes.io/proxy-buffer-size: "256k"
-    nginx.ingress.kubernetes.io/proxy-buffers: "8 256k"
-    nginx.ingress.kubernetes.io/proxy-busy-buffer-size: "256k"
+    nginx.ingress.kubernetes.io/proxy-buffer-size: "1024k"
+    nginx.ingress.kubernetes.io/proxy-buffers: "8 1024k"
+    nginx.ingress.kubernetes.io/proxy-busy-buffer-size: "1024k"
     nginx.ingress.kubernetes.io/proxy-buffers-number: "8"
 
 spec:
